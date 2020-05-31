@@ -15,11 +15,11 @@ const WrappedMap = withScriptjs(withGoogleMap(Map));
 const Contacts = () => {
   return (
     <>
-      <p id="kontaktai2" class="h2">
+      <p id="kontaktai2" className="h2">
         KONTAKTAI
       </p>
-      <div class="container-contacts">
-        <ul class="contact-list">
+      <div className="container-contacts">
+        <ul className="contact-list">
           <li>
             <h3 id="phone">Telefonas:</h3>
             <p>+370 688 54876</p>
@@ -38,7 +38,7 @@ const Contacts = () => {
             <p id="VAT">PVM mokėtojo kodas: LT100007003016</p>
           </li>
         </ul>
-        <div class="map">
+        <div className="map">
           <WrappedMap
             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&
                 libraries=geometry,drawing,places&key=AIzaSyBcbNh4TTSkxDMs0mUuuBYGJqIpB7YcKfE`}

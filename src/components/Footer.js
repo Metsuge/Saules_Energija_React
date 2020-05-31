@@ -8,14 +8,14 @@ const Footer = () => {
   return (
     <>
       <footer>
-        <div class="main-footer">
-          <ul class="footer-list">
+        <div className="main-footer">
+          <ul className="footer-list">
             <li>
               <img src={phonelogo} />
             </li>
             <li>+370 688 54876</li>
           </ul>
-          <ul class="footer-list">
+          <ul className="footer-list">
             <li>
               <img src={email} />
             </li>

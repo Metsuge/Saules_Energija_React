@@ -28,20 +28,20 @@ class Header extends Component {
     return (
       <>
         <header>
-          <nav class="nav" id="nav">
-            <ul class="header-list">
+          <nav className="nav" id="nav">
+            <ul className="header-list">
               <li>
                 <img alt="phone" src={phonelogo} />
               </li>
               <li>+370 688 54876</li>
             </ul>
-            <ul class="header-list">
+            <ul className="header-list">
               <li>
                 <img alt="email" src={email} />
               </li>
               <li>saulesenergija@gmail.com</li>
             </ul>
-            <div class="flags">
+            <div className="flags">
               <a href="#eng" data-reload>
                 <img alt="ENG" src={uk} />
               </a>
@@ -50,23 +50,23 @@ class Header extends Component {
               </a>
             </div>
 
-            <ul class="nav-list">
+            <ul className="nav-list">
               <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
-                <li class="underline">PAGRINDINIS</li>
+                <li className="underline">PAGRINDINIS</li>
               </Link>
               <Link style={{ color: "inherit", textDecoration: "none" }}>
-                <li class="underline">PROJEKTAI</li>
+                <li className="underline">PROJEKTAI</li>
               </Link>
               <Link
                 style={{ color: "inherit", textDecoration: "none" }} to="/contacts">
-                <li class="underline">KONTAKTAI</li>
+                <li className="underline">KONTAKTAI</li>
               </Link>
               <Link style={{ color: "inherit", textDecoration: "none" }}>
-                <li class="underline">PARTNERIAI</li>
+                <li className="underline">PARTNERIAI</li>
               </Link>
               <Link
                 style={{ color: "inherit", textDecoration: "none" }}to="/about">
-                <li class="underline">APIE MUS</li>
+                <li className="underline">APIE MUS</li>
               </Link>
             </ul>
           </nav>
