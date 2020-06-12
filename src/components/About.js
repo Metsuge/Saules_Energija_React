@@ -2,15 +2,15 @@ import React from "react";
 
 const About = () => {
   return (<>
-    <p id="apieImone" class='h2'>APIE ĮMONĘ</p>
-    <div class="container-about">
-      <p class="about-text">
+    <p id="apieImone" className='h2'>APIE ĮMONĘ</p>
+    <div className="container-about">
+      <p className="about-text">
         UAB „Saulės energija” įsteigta 1991 m. Įmonę įkūrė Puslaidininkių
         fizikos instituto laboratorijos kolektyvas siekdamas praktikoje
         įgyvendinti daugiamečius tyrimus.
       </p>
 
-      <p class="about-text">
+      <p className="about-text">
         UAB „Saulės energija“, įkurta 1991 m., specializuojasi fotoelektrinių
         modulių gamyboje, saulės, vėjo ir kombinuotų saulės – vėjo
         mikroelektrinių projektavime bei įrengime. Ilgametė patirtis, aukštos

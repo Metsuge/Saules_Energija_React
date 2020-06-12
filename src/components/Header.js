@@ -54,18 +54,18 @@ class Header extends Component {
               <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
                 <li className="underline">PAGRINDINIS</li>
               </Link>
-              <Link style={{ color: "inherit", textDecoration: "none" }}>
+              <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
                 <li className="underline">PROJEKTAI</li>
               </Link>
               <Link
                 style={{ color: "inherit", textDecoration: "none" }} to="/contacts">
                 <li className="underline">KONTAKTAI</li>
               </Link>
-              <Link style={{ color: "inherit", textDecoration: "none" }}>
+              <Link to="/partners" style={{ color: "inherit", textDecoration: "none" }}>
                 <li className="underline">PARTNERIAI</li>
               </Link>
               <Link
-                style={{ color: "inherit", textDecoration: "none" }}to="/about">
+                style={{ color: "inherit", textDecoration: "none" }} to="/about">
                 <li className="underline">APIE MUS</li>
               </Link>
             </ul>
