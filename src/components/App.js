@@ -15,13 +15,13 @@ import DarbaiLT from "./DarbaiLT";
 import Footer from "./Footer";
 import About from "./About";
 import Contacts from "./Contacts";
-
+import Projects from "./Projects";
 import AnObject from "./AnObject";
 
 const listOfObjectsLT = [
-  { src: slide3, id: 0, name: 'Name1'},
-  { src: slide4, id: 1, name: 'Name2' },
-  { src: slide5, id: 2, name: 'Name3' },
+  { src: slide3, id: 0, name: 'Name1', pic2: slide4},
+  { src: slide4, id: 1, name: 'Name2', pic2: slide4 },
+  { src: slide5, id: 2, name: 'Name3', pic2: slide4 },
 ];
 
 
@@ -48,9 +48,12 @@ class App extends Component {
             <Route path="/about" exact component={About} />
             <Route path="/contacts" exact component={Contacts} />
             <Route path="/partners" exact component={Partneriai} />
+            <Route path="/projects" exact component={() => <Projects onObjectClick={this.onObjectClick}/> } />
             <Route path="/" exact component={() => <DarbaiLT onObjectClick={this.onObjectClick}/> } />
           </Switch>
-          <Footer />
+          <div className='App-footer'>
+            <Footer />
+          </div>
         </div>
       </Router>
     );

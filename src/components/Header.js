@@ -1,21 +1,38 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-import phonelogo from "../images/phone.svg";
-import email from "../images/email.svg";
+// import phonelogo from "../images/phone.svg";
+// import email from "../images/email.svg";
 import lt from "../images/lt_flag.png";
 import uk from "../images/uk_flag.png";
+// import Burger from './Burger';
+
+import '../Styles/menu.css'
+import menuLogo from '../images/open-menu.png';
 
 class Header extends Component {
   //sticky header
+  openMenu = () => {
+    const navList = document.getElementById("nav-list");
+    navList.classList.toggle('open')
+    
+    
+  }
+
+
+
   componentDidMount() {
     window.addEventListener("scroll", () => {
       const isTop = window.scrollY > 100;
       const nav = document.getElementById("nav");
-      if (isTop) {
+      const menuLogo = document.getElementById("menuLogo")
+      const navList = document.getElementById("nav-list");
+      if (isTop && !(navList.style.visibility = "hidden") ) {
         nav.classList.add("scrolled");
+        menuLogo.classList.add("scrolled");
       } else {
         nav.classList.add("scrolled");
+        menuLogo.classList.add("scrolled");
       }
     });
   }
@@ -28,19 +45,22 @@ class Header extends Component {
     return (
       <>
         <header>
+           
           <nav className="nav" id="nav">
-            <ul className="header-list">
+           <div id="menuLogo"><img className='menu_logo' src={menuLogo} onClick={() => this.openMenu()}></img></div> 
+            {/* <ul className="header-list">
               <li>
-                <img alt="phone" src={phonelogo} />
+                <img className="header-logo" alt="phone" src={phonelogo} />
               </li>
               <li>+370 688 54876</li>
             </ul>
             <ul className="header-list">
               <li>
-                <img alt="email" src={email} />
+                <img className="header-logo" alt="email" src={email} />
               </li>
               <li>saulesenergija@gmail.com</li>
-            </ul>
+            </ul> */}
+           
             <div className="flags">
               <a href="#eng" data-reload>
                 <img alt="ENG" src={uk} />
@@ -50,11 +70,11 @@ class Header extends Component {
               </a>
             </div>
 
-            <ul className="nav-list">
+            <ul id="nav-list">
               <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
                 <li className="underline">PAGRINDINIS</li>
               </Link>
-              <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
+              <Link style={{ color: "inherit", textDecoration: "none" }} to="/projects">
                 <li className="underline">PROJEKTAI</li>
               </Link>
               <Link

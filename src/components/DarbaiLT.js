@@ -7,9 +7,9 @@ import { Link } from "react-router-dom";
 
 
 const listOfObjectsLT = [
-  { src: slide3, id: 0, name: 'Name1'},
-  { src: slide4, id: 1, name: 'Name2' },
-  { src: slide5, id: 2, name: 'Name3' },
+  { src: slide3, id: 0, name: 'Name1', pic2: slide4},
+  { src: slide4, id: 1, name: 'Name2', pic2: slide4 },
+  { src: slide5, id: 2, name: 'Name3', pic2: slide4 },
 ];
 
 

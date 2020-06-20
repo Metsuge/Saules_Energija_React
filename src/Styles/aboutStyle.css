@@ -2,10 +2,10 @@
   margin: auto;
   text-align: center;
   margin-bottom: 20px;
-  background-image: linear-gradient(90deg, #e9e8e8, #f8f8f8);
-  font-size: 24px;
+
   border-radius: 9px;
   word-spacing: 10px;
+  color:black;
 }
 
 .container-about {

@@ -1,10 +1,36 @@
 
 .object-div{
     margin:auto;
-    width: 80%;
-    border: 1px solid darkgrey;
+    width: 90%;
+
+    display: flex;
+    border: 1px solid black;
 }
 
 .object-img{
-    margin:auto;
+    margin:10px;
+    width:90%;
+    height: 60%;
+    border: 1px solid darkgrey;
+}
+
+.object-text{
+    width: 60%;
+    height: auto;
+    margin:20px;
+}
+
+
+.img-object-div{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+@media only screen and (max-width: 875px) {
+    .object-div{
+        flex-direction: column;
+    }
+
+
 }

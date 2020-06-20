@@ -1,0 +1,11 @@
+.menu_logo{
+    margin: 15px;
+    cursor: pointer;
+    z-index: 101;
+    position: sticky;
+}
+
+.open{
+  visibility: visible !important;
+  
+}
