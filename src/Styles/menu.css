@@ -1,8 +1,11 @@
 .menu_logo{
-    margin: 15px;
-    cursor: pointer;
     z-index: 101;
     position: sticky;
+    margin: 15px 15px 15px 30px;
+    cursor: pointer;
+}
+#menuLogo{
+    cursor: pointer;
 }
 
 .open{

@@ -13,13 +13,24 @@ import menuLogo from '../images/open-menu.png';
 class Header extends Component {
   //sticky header
   openMenu = () => {
-    const navList = document.getElementById("nav-list");
-    navList.classList.toggle('open')
+const navList = document.getElementById("nav-list");
+const menuLogo = document.getElementById("menuLogo")
+
+    if(window.innerWidth > 800){
+      menuLogo.style.cursor = "none"
+      console.log('click');
+      
+    } else if (window.innerWidth < 800) {
+      navList.classList.toggle('open')
+    };
+    
+    
+    
     
     
   }
 
-
+  // && !(navList.style.visibility = "hidden")
 
   componentDidMount() {
     window.addEventListener("scroll", () => {
@@ -27,12 +38,14 @@ class Header extends Component {
       const nav = document.getElementById("nav");
       const menuLogo = document.getElementById("menuLogo")
       const navList = document.getElementById("nav-list");
-      if (isTop && !(navList.style.visibility = "hidden") ) {
+      if (isTop) {
         nav.classList.add("scrolled");
         menuLogo.classList.add("scrolled");
+        // navList.style.top = "60px"
       } else {
         nav.classList.add("scrolled");
         menuLogo.classList.add("scrolled");
+        // navList.style.top = "60px"
       }
     });
   }
@@ -47,7 +60,7 @@ class Header extends Component {
         <header>
            
           <nav className="nav" id="nav">
-           <div id="menuLogo"><img className='menu_logo' src={menuLogo} onClick={() => this.openMenu()}></img></div> 
+          <div id="menuLogo"><img className='menu_logo' src={menuLogo} onClick={() => this.openMenu()}></img></div> 
             {/* <ul className="header-list">
               <li>
                 <img className="header-logo" alt="phone" src={phonelogo} />
@@ -71,6 +84,7 @@ class Header extends Component {
             </div>
 
             <ul id="nav-list">
+              
               <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
                 <li className="underline">PAGRINDINIS</li>
               </Link>

@@ -53,10 +53,15 @@ header {
 }
 .scrolled {
   position: fixed;
-  top: 0;
+  top:0;
   width: 100%;
   z-index: 99;
   background-color: white;
+  height:70px;
+}
+
+.scrolled-list{
+   top: 60px;
 }
 
 footer {
@@ -92,7 +97,7 @@ footer {
 #nav-list {
   visibility: visible;
   display: flex;
-  margin-top: 10px;
+  margin-top: 30px;
   justify-content: space-around;
   width: 70%;
   margin-right: 90px;
@@ -335,6 +340,8 @@ footer {
 @media only screen and (max-width: 800px) {
   .underline {
     font-size: 13px;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 
   .header-list {
@@ -350,8 +357,34 @@ footer {
   left: 0 !important;
   flex-direction: column;
   z-index: 100;
-  margin-top: 60px;
-  visibility: hidden;
+  width: 120px;
+  height: 100vh;
   background-color: white;
+  visibility: hidden;
  }
+
+ .scrolled {
+  position: fixed;
+  width: 100%;
+  z-index: 101;
+  background-color: white;
+  height:70px;
+}
+}
+
+
+@media only screen and (max-width: 1240px) {
+  .underline {
+    font-size: 16px;
+  }
+
+  .header-list {
+    font-size: 16px;
+  }
+
+  .header-logo {
+    width: 15px;
+  }
+
+ 
 }
