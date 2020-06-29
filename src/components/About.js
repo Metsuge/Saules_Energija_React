@@ -1,8 +1,21 @@
 import React from "react";
+// import { useTranslation} from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
-const About = () => {
+const About = ({ t, i18n }) => {
+
+  // const { t, i18n } = useTranslation();
+
+  const changeLanguage = code => {
+    i18n.changeLanguage(code);   
+  };
+
   return (<>
-    <p id="apieImone" className='h2'>APIE ĮMONĘ</p>
+    <p id="apieImone" className='h2'>{t('about.title')}</p>
+    <button type="button" onClick={() => changeLanguage('en')}>{t('translation:en')}</button>
+    <button type="button" onClick={() => changeLanguage('lt')}>{t('translation:lt')}</button>
+   
+
     <div className="container-about">
       <p className="about-text">
         UAB „Saulės energija” įsteigta 1991 m. Įmonę įkūrė Puslaidininkių
@@ -32,4 +45,4 @@ const About = () => {
 };
 
 
-export default About;
+export default withTranslation('translation') (About);

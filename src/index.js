@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 
+import './i18n';
+
 ReactDOM.render(
-    <App />,
+    <Suspense fallback={null}>
+    <App />
+  </Suspense>,
     document.querySelector('#root')
 );

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../Styles/style.css";
 import "../Styles/aboutStyle.css";
-import '../Styles/AnObject.css';
+import "../Styles/AnObject.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import slide3 from "../images/slide3.jpg";
@@ -18,40 +18,66 @@ import Contacts from "./Contacts";
 import Projects from "./Projects";
 import AnObject from "./AnObject";
 
+import { withTranslation } from "react-i18next";
+
 const listOfObjectsLT = [
-  { src: slide3, id: 0, name: 'Name1', pic2: slide4},
-  { src: slide4, id: 1, name: 'Name2', pic2: slide4 },
-  { src: slide5, id: 2, name: 'Name3', pic2: slide4 },
+  { src: slide3, id: 0, name: "Name1", pic2: slide4 },
+  { src: slide4, id: 1, name: "Name2", pic2: slide4 },
+  { src: slide5, id: 2, name: "Name3", pic2: slide4 },
 ];
 
-
-let clickeddiv = 1
-
-
+let clickeddiv = 1;
 
 class App extends Component {
   onObjectClick = (clickeddivffromdarbai) => {
-    clickeddiv =  clickeddivffromdarbai;
+    clickeddiv = clickeddivffromdarbai;
   };
 
   render() {
+    const { t } = this.props;
+    console.log("t from the App: ", t);
+    const changeLanguage = (code) => {
+      i18n.changeLanguage(code);
+    };
+    const { i18n } = this.props;
+
     return (
-      
       <Router>
-        
         <div>
-          
-          <Header />
+          <div>
+            <button type="button" onClick={() => changeLanguage("en")}>
+              {t("translation:en")}
+            </button>
+            <button type="button" onClick={() => changeLanguage("lt")}>
+              {t("translation:lt")}
+            </button>
+          </div>
+          <Header t={t} />
           <Slides />
           <Switch>
-            <Route path="/object/:id" exact component={() => <AnObject list={listOfObjectsLT} number={clickeddiv} /> } />
+            <Route
+              path="/object/:id"
+              exact
+              component={() => (
+                <AnObject list={listOfObjectsLT} number={clickeddiv} />
+              )}
+            />
+
             <Route path="/about" exact component={About} />
             <Route path="/contacts" exact component={Contacts} />
             <Route path="/partners" exact component={Partneriai} />
-            <Route path="/projects" exact component={() => <Projects onObjectClick={this.onObjectClick}/> } />
-            <Route path="/" exact component={() => <DarbaiLT onObjectClick={this.onObjectClick}/> } />
+            <Route
+              path="/projects"
+              exact
+              component={() => <Projects onObjectClick={this.onObjectClick} />}
+            />
+            <Route
+              path="/"
+              exact
+              component={() => <DarbaiLT onObjectClick={this.onObjectClick} />}
+            />
           </Switch>
-          <div className='App-footer'>
+          <div className="App-footer">
             <Footer />
           </div>
         </div>
@@ -60,4 +86,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withTranslation("translation")(App);

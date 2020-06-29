@@ -1,0 +1,13 @@
+{
+  "about": {
+    "title": "ABOUT THE COMPANY"
+  },
+
+  "header": {
+    "home": "HOME",
+    "projects": "PROJECTS",
+    "contacts": "CONTACTS",
+    "partners": "PARTNERS",
+    "about_us": "ABOUT US"
+ }
+}

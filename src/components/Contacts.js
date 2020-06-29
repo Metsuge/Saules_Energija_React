@@ -1,6 +1,8 @@
 import React from "react";
 import { GoogleMap, withScriptjs, withGoogleMap } from "react-google-maps";
 
+import { useTranslation} from 'react-i18next';
+
 function Map() {
   return (
     <GoogleMap
@@ -13,8 +15,16 @@ function Map() {
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 const Contacts = () => {
+
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = code => {
+    i18n.changeLanguage(code);
+  };
   return (
     <>
+    <button type="button" onClick={() => changeLanguage('en')}>{t('translation:en')}</button>
+    <button type="button" onClick={() => changeLanguage('lt')}>{t('translation:lt')}</button>
       <p id="kontaktai2" className="h2">
         KONTAKTAI
       </p>

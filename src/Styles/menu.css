@@ -1,14 +1,25 @@
 .menu_logo{
     z-index: 101;
     position: sticky;
-    margin: 15px 15px 15px 30px;
+    margin: 0px 15px 15px 30px;
     cursor: pointer;
+    margin-top:20px;
+}
+
+.menu_logo:active{
+  transform: scale(0.95);
 }
 #menuLogo{
     cursor: pointer;
 }
 
 .open{
-  visibility: visible !important;
+  display: flex !important;
+  -webkit-transition: width .5s;
+  transition: width .5s; 
   
 }
+
+/* .open:active{
+   
+} */

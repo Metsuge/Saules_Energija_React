@@ -3,48 +3,40 @@ import { Link } from "react-router-dom";
 
 // import phonelogo from "../images/phone.svg";
 // import email from "../images/email.svg";
-import lt from "../images/lt_flag.png";
-import uk from "../images/uk_flag.png";
+// import lt from "../images/lt_flag.png";
+// import uk from "../images/uk_flag.png";
 // import Burger from './Burger';
 
-import '../Styles/menu.css'
-import menuLogo from '../images/open-menu.png';
+import "../Styles/menu.css";
+import menuLogo from "../images/open-menu.png";
 
 class Header extends Component {
   //sticky header
   openMenu = () => {
-const navList = document.getElementById("nav-list");
-const menuLogo = document.getElementById("menuLogo")
+    const navList = document.getElementById("nav");
+    // const menuLogo = document.getElementById("menuLogo")
 
-    if(window.innerWidth > 800){
-      menuLogo.style.cursor = "none"
-      console.log('click');
-      
+    if (window.innerWidth > 800) {
+      // menuLogo.style.cursor = "none"
+      console.log("click");
     } else if (window.innerWidth < 800) {
-      navList.classList.toggle('open')
-    };
-    
-    
-    
-    
-    
-  }
-
-  // && !(navList.style.visibility = "hidden")
+      navList.classList.toggle("open");
+    }
+  };
 
   componentDidMount() {
     window.addEventListener("scroll", () => {
       const isTop = window.scrollY > 100;
-      const nav = document.getElementById("nav");
-      const menuLogo = document.getElementById("menuLogo")
-      const navList = document.getElementById("nav-list");
+      const nav = document.getElementById("nav-list");
+      // const menuLogo = document.getElementById("menuLogo")
+      // const navList = document.getElementById("nav");
       if (isTop) {
         nav.classList.add("scrolled");
-        menuLogo.classList.add("scrolled");
+        // menuLogo.classList.add("scrolled");
         // navList.style.top = "60px"
       } else {
         nav.classList.add("scrolled");
-        menuLogo.classList.add("scrolled");
+        // menuLogo.classList.add("scrolled");
         // navList.style.top = "60px"
       }
     });
@@ -55,13 +47,11 @@ const menuLogo = document.getElementById("menuLogo")
   }
 
   render() {
+    const t = this.props.t;
     return (
       <>
         <header>
-           
-          <nav className="nav" id="nav">
-          <div id="menuLogo"><img className='menu_logo' src={menuLogo} onClick={() => this.openMenu()}></img></div> 
-            {/* <ul className="header-list">
+          {/* <ul className="header-list">
               <li>
                 <img className="header-logo" alt="phone" src={phonelogo} />
               </li>
@@ -73,37 +63,54 @@ const menuLogo = document.getElementById("menuLogo")
               </li>
               <li>saulesenergija@gmail.com</li>
             </ul> */}
-           
-            <div className="flags">
+
+          {/* <div className="flags">
               <a href="#eng" data-reload>
                 <img alt="ENG" src={uk} />
               </a>
               <a href="#lt" data-reload>
                 <img alt="LT" src={lt} />
               </a>
-            </div>
+            </div> */}
 
-            <ul id="nav-list">
-              
+          <ul id="nav-list">
+            <div id="menuLogo">
+              <img
+                className="menu_logo"
+                src={menuLogo}
+                onClick={() => this.openMenu()}
+              ></img>
+            </div>
+            <nav className="nav" id="nav">
               <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
-                <li className="underline">PAGRINDINIS</li>
-              </Link>
-              <Link style={{ color: "inherit", textDecoration: "none" }} to="/projects">
-                <li className="underline">PROJEKTAI</li>
+              <li className="underline">{t("header.home")}</li>
               </Link>
               <Link
-                style={{ color: "inherit", textDecoration: "none" }} to="/contacts">
-                <li className="underline">KONTAKTAI</li>
-              </Link>
-              <Link to="/partners" style={{ color: "inherit", textDecoration: "none" }}>
-                <li className="underline">PARTNERIAI</li>
+                style={{ color: "inherit", textDecoration: "none" }}
+                to="/projects"
+              >
+                <li className="underline">{t("header.projects")}</li>
               </Link>
               <Link
-                style={{ color: "inherit", textDecoration: "none" }} to="/about">
-                <li className="underline">APIE MUS</li>
+                style={{ color: "inherit", textDecoration: "none" }}
+                to="/contacts"
+              >
+                <li className="underline">{t("header.contacts")}</li>
               </Link>
-            </ul>
-          </nav>
+              <Link
+                to="/partners"
+                style={{ color: "inherit", textDecoration: "none" }}
+              >
+                <li className="underline">{t("header.partners")}</li>
+              </Link>
+              <Link
+                style={{ color: "inherit", textDecoration: "none" }}
+                to="/about"
+              >
+                <li className="underline">{t("header.about_us")}</li>
+              </Link>
+            </nav>
+          </ul>
         </header>
       </>
     );
