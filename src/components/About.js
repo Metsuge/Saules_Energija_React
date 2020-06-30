@@ -2,18 +2,18 @@ import React from "react";
 // import { useTranslation} from 'react-i18next';
 import { withTranslation } from 'react-i18next';
 
-const About = ({ t, i18n }) => {
+const About = ({ t}) => {
 
   // const { t, i18n } = useTranslation();
 
-  const changeLanguage = code => {
-    i18n.changeLanguage(code);   
-  };
+  // const changeLanguage = code => {
+  //   i18n.changeLanguage(code);   
+  // };
 
   return (<>
     <p id="apieImone" className='h2'>{t('about.title')}</p>
-    <button type="button" onClick={() => changeLanguage('en')}>{t('translation:en')}</button>
-    <button type="button" onClick={() => changeLanguage('lt')}>{t('translation:lt')}</button>
+    {/* <button type="button" onClick={() => changeLanguage('en')}>{t('translation:en')}</button>
+    <button type="button" onClick={() => changeLanguage('lt')}>{t('translation:lt')}</button> */}
    
 
     <div className="container-about">

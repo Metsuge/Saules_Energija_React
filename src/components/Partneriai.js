@@ -13,19 +13,19 @@ const Partneriai = () => {
       <div className="main-img-partners">
         <div className="main-img-partners-each">
           <h3 className="partners-name">Pavadinimas</h3>
-          <img src={slide3} />
+          <img alt="pic" src={slide3} />
         </div>
         <div className="main-img-partners-each">
           <h3 className="partners-name">Pavadinimas</h3>
-          <img src={slide3} />
+          <img alt="pic" src={slide3} />
         </div>
         <div className="main-img-partners-each">
           <h3 className="partners-name">Pavadinimas</h3>
-          <img src={slide3} />
+          <img alt="pic" src={slide3} />
         </div>
         <div className="main-img-partners-each">
           <h3 className="partners-name">Pavadinimas</h3>
-          <img src={slide3} />
+          <img alt="pic" src={slide3} />
         </div>
       </div>
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 import { GoogleMap, withScriptjs, withGoogleMap } from "react-google-maps";
 
-import { useTranslation} from 'react-i18next';
+import { withTranslation } from 'react-i18next';
 
 function Map() {
   return (
@@ -14,38 +14,31 @@ function Map() {
 
 const WrappedMap = withScriptjs(withGoogleMap(Map));
 
-const Contacts = () => {
-
-  const { t, i18n } = useTranslation();
-
-  const changeLanguage = code => {
-    i18n.changeLanguage(code);
-  };
+const Contacts = ({ t }) => {
   return (
     <>
-    <button type="button" onClick={() => changeLanguage('en')}>{t('translation:en')}</button>
-    <button type="button" onClick={() => changeLanguage('lt')}>{t('translation:lt')}</button>
+    
       <p id="kontaktai2" className="h2">
-        KONTAKTAI
+        {t('contacts.title')}
       </p>
       <div className="container-contacts">
         <ul className="contact-list">
           <li>
-            <h3 id="phone">Telefonas:</h3>
+            <h3 id="phone">{t('contacts.phone')}</h3>
             <p>+370 688 54876</p>
           </li>
           <li>
-            <h3 id="emaill">El. paštas:</h3>
+            <h3 id="emaill">{t('contacts.email')}</h3>
             <p>saulesenergija@gmail.com</p>
           </li>
           <li>
-            <h3 id="adress">Adresas:</h3>
+            <h3 id="adress">{t('contacts.adress')}</h3>
             <p>Virbališkių km., Ringaudų sen., Saulės g. 1, Kaunas</p>
           </li>
           <li>
-            <h3 id="companyInfo">Rekvizitai:</h3>
-            <p id="companyCode">Įmonės kodas: 302819713</p>
-            <p id="VAT">PVM mokėtojo kodas: LT100007003016</p>
+            <h3 id="companyInfo">{t('contacts.details')}</h3>
+            <p id="companyCode">{t('contacts.comp_code')}302819713</p>
+            <p id="VAT">{t('contacts.VAT')} LT100007003016</p>
           </li>
         </ul>
         <div className="map">
@@ -62,4 +55,4 @@ const Contacts = () => {
   );
 };
 
-export default Contacts;
+export default withTranslation('translation') (Contacts);

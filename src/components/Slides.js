@@ -56,7 +56,7 @@ class Slides extends Component {
           {photos.map(photo => {
             return (
               <div>
-                <img width="100%" height="100%" src={photo.url} />
+                <img alt="pic" width="100%" height="100%" src={photo.url} />
               </div>
             );
           })}

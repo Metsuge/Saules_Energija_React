@@ -9,5 +9,43 @@
     "contacts": "CONTACTS",
     "partners": "PARTNERS",
     "about_us": "ABOUT US"
- }
+  },
+
+  "contacts": {
+    "title": "CONTACTS",
+    "phone": "Phones:",
+    "adress": "Adress:",
+    "details": "Details",
+    "comp_code": "Company code:",
+    "VAT": "VAT:"
+  },
+
+  "LTprojects": {
+    "title": "PROJECTS IN LITHUANIA"
+  },
+
+  "listOfObjectsLT": {
+    "id0": {
+      "title": "Title0",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+    },
+
+    "id1": {
+      "title": "Title1",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+    },
+    "id2": {
+      "title": "Title2",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+    },
+    "id3": {
+      "title": "Title3",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+    },
+    "id4": {
+      "title": "Title4",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+    }
+  }
+
 }

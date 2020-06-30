@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 // import phonelogo from "../images/phone.svg";
 // import email from "../images/email.svg";
-// import lt from "../images/lt_flag.png";
-// import uk from "../images/uk_flag.png";
+import lt from "../images/lt_flag.png";
+import uk from "../images/uk_flag.png";
 // import Burger from './Burger';
 
 import "../Styles/menu.css";
@@ -48,42 +48,39 @@ class Header extends Component {
 
   render() {
     const t = this.props.t;
+    const changeLanguage = (code) => {
+      i18n.changeLanguage(code);
+    };
+    const { i18n } = this.props;
     return (
       <>
         <header>
-          {/* <ul className="header-list">
-              <li>
-                <img className="header-logo" alt="phone" src={phonelogo} />
-              </li>
-              <li>+370 688 54876</li>
-            </ul>
-            <ul className="header-list">
-              <li>
-                <img className="header-logo" alt="email" src={email} />
-              </li>
-              <li>saulesenergija@gmail.com</li>
-            </ul> */}
-
-          {/* <div className="flags">
-              <a href="#eng" data-reload>
-                <img alt="ENG" src={uk} />
-              </a>
-              <a href="#lt" data-reload>
-                <img alt="LT" src={lt} />
-              </a>
-            </div> */}
-
           <ul id="nav-list">
+            <div className="flags">
+              <img
+                className="en_flag flag_icon"
+                onClick={() => changeLanguage("en")}
+                alt="ENG"
+                src={uk}
+              />
+              <img
+                className="lt_flag flag_icon"
+                onClick={() => changeLanguage("lt")}
+                alt="LT"
+                src={lt}
+              />
+            </div>
             <div id="menuLogo">
               <img
                 className="menu_logo"
                 src={menuLogo}
                 onClick={() => this.openMenu()}
+                alt="menu"
               ></img>
             </div>
             <nav className="nav" id="nav">
               <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
-              <li className="underline">{t("header.home")}</li>
+                <li className="underline">{t("header.home")}</li>
               </Link>
               <Link
                 style={{ color: "inherit", textDecoration: "none" }}

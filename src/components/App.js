@@ -20,10 +20,14 @@ import AnObject from "./AnObject";
 
 import { withTranslation } from "react-i18next";
 
+//LIST OF OBJECTS IN LT
+
 const listOfObjectsLT = [
   { src: slide3, id: 0, name: "Name1", pic2: slide4 },
   { src: slide4, id: 1, name: "Name2", pic2: slide4 },
   { src: slide5, id: 2, name: "Name3", pic2: slide4 },
+  { src: slide5, id: 3, name: "Name3", pic2: slide4 },
+  { src: slide5, id: 4, name: "Name3", pic2: slide4 }
 ];
 
 let clickeddiv = 1;
@@ -34,35 +38,20 @@ class App extends Component {
   };
 
   render() {
-    const { t } = this.props;
-    console.log("t from the App: ", t);
-    const changeLanguage = (code) => {
-      i18n.changeLanguage(code);
-    };
-    const { i18n } = this.props;
-
+    const { t, i18n } = this.props;   
     return (
       <Router>
         <div>
-          <div>
-            <button type="button" onClick={() => changeLanguage("en")}>
-              {t("translation:en")}
-            </button>
-            <button type="button" onClick={() => changeLanguage("lt")}>
-              {t("translation:lt")}
-            </button>
-          </div>
-          <Header t={t} />
+          <Header t={t} i18n={i18n} />
           <Slides />
           <Switch>
             <Route
               path="/object/:id"
               exact
               component={() => (
-                <AnObject list={listOfObjectsLT} number={clickeddiv} />
+                <AnObject t={t} list={listOfObjectsLT} number={clickeddiv} />
               )}
             />
-
             <Route path="/about" exact component={About} />
             <Route path="/contacts" exact component={Contacts} />
             <Route path="/partners" exact component={Partneriai} />
@@ -74,7 +63,7 @@ class App extends Component {
             <Route
               path="/"
               exact
-              component={() => <DarbaiLT onObjectClick={this.onObjectClick} />}
+              component={() => <DarbaiLT onObjectClick={this.onObjectClick} t={t} />}
             />
           </Switch>
           <div className="App-footer">

@@ -5,28 +5,17 @@ import slide5 from "../images/slide-1024x293.jpg";
 
 import { Link } from "react-router-dom";
 
-
 const listOfObjectsLT = [
-  { src: slide3, id: 0, name: 'Name1', pic2: slide4},
-  { src: slide4, id: 1, name: 'Name2', pic2: slide4 },
-  { src: slide5, id: 2, name: 'Name3', pic2: slide4 },
-  { src: slide5, id: 2, name: 'Name3', pic2: slide4 },
-  { src: slide5, id: 2, name: 'Name3', pic2: slide4 },
-  { src: slide5, id: 2, name: 'Name3', pic2: slide4 },
-  { src: slide5, id: 2, name: 'Name3', pic2: slide4},
-  { src: slide5, id: 2, name: 'Name3', pic2: slide4 },
-
+  { src: slide3, id: 0, name: "Name1", pic2: slide4 },
+  { src: slide4, id: 1, name: "Name2", pic2: slide4 },
+  { src: slide5, id: 2, name: "Name3", pic2: slide4 },
+  { src: slide5, id: 3, name: "Name3", pic2: slide4 },
+  { src: slide5, id: 4, name: "Name3", pic2: slide4 }
 ];
 
-
-
-const DarbaiLT = ({onObjectClick}) => {
-
- 
-
+const DarbaiLT = ({ onObjectClick }) => {
   return (
     <>
-  
       <p id="PROJECTSINLT" className="h2">
         DARBAI LIETUVOJE
       </p>
@@ -43,13 +32,10 @@ const DarbaiLT = ({onObjectClick}) => {
                 <div className="text-container-glass"></div>
                 <p className="textonimg">Tekstas ant paveiksliuko</p>
               </div>
-              
             </Link>
-            
           );
         })}
       </div>
-      
     </>
   );
 };
