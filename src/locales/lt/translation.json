@@ -22,31 +22,37 @@
     "VAT": "PVM mokėtojo kodas:"
   },
 
-  "LTprojects": {
-    "title": "DARBAI LIETUVOJE"
+  "DarbaiLT": {
+    "title": "DARBAI LIETUVOJE",
+    "linkToProj": "VISI PROJEKTAI"
   },
 
   "listOfObjectsLT": {
     "id0": {
-      "title": "Pavadinimas0",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+      "title": "Title0",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "Tekstas ant nuotraukos"
     },
 
     "id1": {
-      "title": "Pavadinimas1",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+      "title": "Title0",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "Tekstas ant nuotraukos"
     },
     "id2": {
-      "title": "Pavadinimas2",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+      "title": "Title2",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "Tekstas ant nuotraukos"
     },
     "id3": {
-      "title": "Pavadinimas3",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+      "title": "Title3",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "Tekstas ant nuotraukos"
     },
     "id4": {
-      "title": "Pavadinimas4",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+      "title": "Title4",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "Tekstas ant nuotraukos"
     }
   }
 }

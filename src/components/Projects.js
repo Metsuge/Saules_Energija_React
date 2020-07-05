@@ -1,27 +1,68 @@
-import React from "react";
-import slide3 from "../images/slide3.jpg";
-import slide4 from "../images/slide4.jpg";
-import slide5 from "../images/slide-1024x293.jpg";
-
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { withTranslation } from "react-i18next";
 
-const listOfObjectsLT = [
-  { src: slide3, id: 0, name: "Name1", pic2: slide4 },
-  { src: slide4, id: 1, name: "Name2", pic2: slide4 },
-  { src: slide5, id: 2, name: "Name3", pic2: slide4 },
-  { src: slide5, id: 3, name: "Name3", pic2: slide4 },
-  { src: slide5, id: 4, name: "Name3", pic2: slide4 }
-];
+import '../Styles/buttons.css'
+let selectedList = [];
+const Projects = ({ onObjectClick, listOfObjectsLT, t}) => {
+  let [ objectTag, setTag ] = useState('');
+ 
+  // console.log("Selected list: ", selectedList);
+  let input = null;
+//onclick function
 
-const DarbaiLT = ({ onObjectClick }) => {
+const changeState = () => setTag((objectTag = input));
+
+const ObjectsToRender=()=>{ 
+  selectedList = []; 
+  for(let i=0;i<listOfObjectsLT.length;i++){
+    
+    
+    if(listOfObjectsLT[i].tag === objectTag){
+      selectedList.push(listOfObjectsLT[i])
+      console.log(listOfObjectsLT[i].tag, objectTag, selectedList);
+    }
+  }    
+  
+}
+
+console.log(selectedList);
+
+
+const getInput=(fromOnClick)=>{
+  
+  input=fromOnClick;
+  changeState();
+  ObjectsToRender()
+}
+  
+
   return (
     <>
-      <p id="PROJECTSINLT" className="h2">
-        DARBAI LIETUVOJE
+      <p className="h2">
+      {t("DarbaiLT.title")}
       </p>
 
+      <div >
+        <ul className="buttonList">
+          <li>
+            <button type='button' name="all" onClick={(e) => {getInput(e.target.name)}}>All</button>
+          </li>
+          <li>
+            <button type='button' name="2001" onClick={ (e) => {getInput(e.target.name)} }>2001</button>
+          </li>
+          <li>
+            <button type='button' name="2002" onClick={ (e) => {getInput(e.target.name)} }>2002</button>
+          </li>
+        </ul>
+        
+      </div>
+      
       <div className="img-section">
-        {listOfObjectsLT.map((oneObject) => {
+        {console.log("Rendering:", selectedList)}
+        {selectedList.map((oneObject) => {
+          
+          
           return (
             <Link to={`/object/${oneObject.id}`}>
               <div
@@ -30,7 +71,7 @@ const DarbaiLT = ({ onObjectClick }) => {
               >
                 <img alt="" className="darbai-img" src={oneObject.src} />
                 <div className="text-container-glass"></div>
-                <p className="textonimg">Tekstas ant paveiksliuko</p>
+                <p className="textonimg">{t(`listOfObjectsLT.id${oneObject.id}.introtext`)}</p>
               </div>
             </Link>
           );
@@ -40,4 +81,4 @@ const DarbaiLT = ({ onObjectClick }) => {
   );
 };
 
-export default DarbaiLT;
+export default withTranslation("translation")(Projects);

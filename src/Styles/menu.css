@@ -1,25 +1,18 @@
-.menu_logo{
-    z-index: 101;
-    position: sticky;
-    margin: 0px 15px 15px 30px;
-    cursor: pointer;
-    margin-top:20px;
-}
-
-.menu_logo:active{
-  transform: scale(0.95);
-}
-#menuLogo{
-    cursor: pointer;
-}
-
-.open{
-  display: flex !important;
-  -webkit-transition: width .5s;
-  transition: width .5s; 
+.menu_logo {
+  z-index: 101;
+  position: sticky;
+  margin: 0px 15px 15px 30px;
   
+  margin-top: 20px;
 }
 
-/* .open:active{
-   
+
+/* #menuLogo {
+  
 } */
+
+.open {
+  display: flex !important;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}

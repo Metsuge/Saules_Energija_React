@@ -1,6 +1,7 @@
 {
   "about": {
-    "title": "ABOUT THE COMPANY"
+    "title": "ABOUT THE COMPANY",
+    "text": "UAB „Saulės energija” įsteigta 1991 m. Įmonę įkūrė Puslaidininkių fizikos instituto laboratorijos kolektyvas siekdamas praktikoje įgyvendinti daugiamečius tyrimus.      UAB „Saulės energija“, įkurta 1991 m., specializuojasi fotoelektrinių modulių gamyboje, saulės, vėjo ir kombinuotų saulės – vėjo mikroelektrinių projektavime bei įrengime. Ilgametė patirtis, aukštos kvalifikacijos personalas ir tik laiko patikrinta, geriausios kokybės naudojama įranga leidžia įgyvendinti optimaliausius energetinius sprendimus. Mūsų bendrovė vienintelė Lietuvoje galinti pasigirti tokia gausa sėkmingai įdiegtų ir veikiančių projektų. Pagrindinės UAB „Saulės energija“ teikiamos paslaugos yra mažųjų atsinaujinančiosios energijos elektrinių įrengimas įvairiems vartotojams: mokykloms, kolegijoms, universitetams, ūkininkams, sodybų ir sodų namelių savininkams ir kitiems privatiems, visuomeniniams bei valstybiniams elektros energijos vartotojams. Įrengiame autonomines jėgaines objektuose, kur nėra energetikos sistemos elektros energijos paskirstymo tinklo, sujungtas su skirstomaisiais tinklais saulės ir vėjo mikroelektrines, kompleksines elektros ir šilumos tiekimo energetines sistemas."
   },
 
   "header": {
@@ -14,38 +15,49 @@
   "contacts": {
     "title": "CONTACTS",
     "phone": "Phones:",
+    "email": "Email",
     "adress": "Adress:",
     "details": "Details",
     "comp_code": "Company code:",
     "VAT": "VAT:"
   },
 
-  "LTprojects": {
-    "title": "PROJECTS IN LITHUANIA"
+  "DarbaiLT": {
+    "title": "PROJECTS IN LITHUANIA",
+    "linkToProj": "ALL PROJECTS"
   },
 
   "listOfObjectsLT": {
     "id0": {
       "title": "Title0",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "Text on pic"
     },
 
     "id1": {
-      "title": "Title1",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+      "title": "Title0",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "Text on pic"
     },
     "id2": {
-      "title": "Title2",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+      "title": "Title0",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "Text on pic"
     },
     "id3": {
-      "title": "Title3",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+      "title": "Title0",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "Text on pic"
     },
     "id4": {
-      "title": "Title4",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo."
+      "title": "Title0",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "Text on pic"
     }
+  },
+
+  "Projects": {
+    "title": "PROJECTS IN LITHUANIA"
   }
 
 }

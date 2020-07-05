@@ -3,14 +3,12 @@ import "../Styles/style.css";
 import "../Styles/aboutStyle.css";
 import "../Styles/AnObject.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 import slide3 from "../images/slide3.jpg";
 import slide4 from "../images/slide4.jpg";
 import slide5 from "../images/slide-1024x293.jpg";
 
 import Header from "./Header";
 import Partneriai from "./Partneriai";
-import Slides from "./Slides";
 import DarbaiLT from "./DarbaiLT";
 import Footer from "./Footer";
 import About from "./About";
@@ -20,14 +18,12 @@ import AnObject from "./AnObject";
 
 import { withTranslation } from "react-i18next";
 
-//LIST OF OBJECTS IN LT
-
 const listOfObjectsLT = [
-  { src: slide3, id: 0, name: "Name1", pic2: slide4 },
-  { src: slide4, id: 1, name: "Name2", pic2: slide4 },
-  { src: slide5, id: 2, name: "Name3", pic2: slide4 },
-  { src: slide5, id: 3, name: "Name3", pic2: slide4 },
-  { src: slide5, id: 4, name: "Name3", pic2: slide4 }
+  { src: slide3, id: "0", name: "Name1", pic2: slide4, tag: "2002" },
+  { src: slide4, id: "1", name: "Name2", pic2: slide4, tag: "2002" },
+  { src: slide5, id: "2", name: "Name3", pic2: slide4, tag: "2001" },
+  { src: slide5, id: "3", name: "Name3", pic2: slide4, tag: "2001" },
+  { src: slide5, id: "4", name: "Name3", pic2: slide4, tag: "2001" },
 ];
 
 let clickeddiv = 1;
@@ -38,12 +34,12 @@ class App extends Component {
   };
 
   render() {
-    const { t, i18n } = this.props;   
+    const { t, i18n } = this.props;
     return (
       <Router>
         <div>
           <Header t={t} i18n={i18n} />
-          <Slides />
+
           <Switch>
             <Route
               path="/object/:id"
@@ -58,12 +54,25 @@ class App extends Component {
             <Route
               path="/projects"
               exact
-              component={() => <Projects onObjectClick={this.onObjectClick} />}
+              component={() => (
+                <Projects
+                  number={clickeddiv}
+                  onObjectClick={this.onObjectClick}
+                  listOfObjectsLT={listOfObjectsLT}
+                  t={t}
+                />
+              )}
             />
             <Route
               path="/"
               exact
-              component={() => <DarbaiLT onObjectClick={this.onObjectClick} t={t} />}
+              component={() => (
+                <DarbaiLT
+                  onObjectClick={this.onObjectClick}
+                  listOfObjectsLT={listOfObjectsLT}
+                  t={t}
+                />
+              )}
             />
           </Switch>
           <div className="App-footer">
