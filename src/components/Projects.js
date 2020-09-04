@@ -2,67 +2,105 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { withTranslation } from "react-i18next";
 
-import '../Styles/buttons.css'
+
+import "../Styles/buttons.css";
 let selectedList = [];
-const Projects = ({ onObjectClick, listOfObjectsLT, t}) => {
-  let [ objectTag, setTag ] = useState('');
- 
-  // console.log("Selected list: ", selectedList);
+
+const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
+  let [objectTag, setTag] = useState("all");
   let input = null;
-//onclick function
+  
+  //setting the state
+  const changeState = () => setTag((objectTag = input));
 
-const changeState = () => setTag((objectTag = input));
+  if(objectTag === 'all'){
+    selectedList = listOfObjectsLT
+  }
 
-const ObjectsToRender=()=>{ 
-  selectedList = []; 
-  for(let i=0;i<listOfObjectsLT.length;i++){
+
+  //uzdeda pilka kai paspaudi, galima pasirinkti kelis tagus
+  // const addClass = () =>{
+  //   //the one that's clicked now
+  //   let clickedBtn = document.getElementById(objectTag);
+  //   clickedBtn.classList.toggle('active_button')
+  // }
+
+  const objectTagList = [''];
+
+  const getTagList = () => {
+    objectTagList.push(objectTag)
     
-    
-    if(listOfObjectsLT[i].tag === objectTag){
-      selectedList.push(listOfObjectsLT[i])
-      console.log(listOfObjectsLT[i].tag, objectTag, selectedList);
-    }
-  }    
+  }
+
+  const ObjectsToRender = () => {
+    selectedList = [];    //list of objects to be rendered
+    //addClass()
+    for (let i = 0; i < listOfObjectsLT.length; i++) {     
+      if (listOfObjectsLT[i].tag === objectTag){
+        selectedList.push(listOfObjectsLT[i]);
+      }
+    }   
+  };
+
+
+  //onclick paleidziamos funkcijos
+  const getInput = (fromOnClick) => {
+    input = fromOnClick;
+    changeState();
+    ObjectsToRender();
+    getTagList();
+  };
   
-}
-
-console.log(selectedList);
-
-
-const getInput=(fromOnClick)=>{
-  
-  input=fromOnClick;
-  changeState();
-  ObjectsToRender()
-}
-  
-
   return (
     <>
-      <p className="h2">
-      {t("DarbaiLT.title")}
-      </p>
+      <p className="h2">{t("DarbaiLT.title")}</p>
 
-      <div >
+      <div>
         <ul className="buttonList">
           <li>
-            <button type='button' name="all" onClick={(e) => {getInput(e.target.name)}}>All</button>
+            <button
+              className="tag_button" 
+              id="all"
+              type="button"
+              name="all"
+              onClick={(e) => {
+                getInput(e.target.name);
+              }}
+            >
+              {t("Projects.all")}
+            </button>
           </li>
           <li>
-            <button type='button' name="2001" onClick={ (e) => {getInput(e.target.name)} }>2001</button>
+            <button
+              className="tag_button"
+              id="2001"
+              type="button"
+              name="2001"
+              onClick={(e) => {
+                getInput(e.target.name);
+              }}
+            >
+              2001
+            </button>
           </li>
           <li>
-            <button type='button' name="2002" onClick={ (e) => {getInput(e.target.name)} }>2002</button>
+            <button
+              className="tag_button 2020"
+              id="2020"
+              type="button"
+              name="2020"
+              onClick={(e) => {
+                getInput(e.target.name);
+              }}
+            >
+              2020
+            </button>
           </li>
         </ul>
-        
       </div>
-      
+
       <div className="img-section">
-        {console.log("Rendering:", selectedList)}
         {selectedList.map((oneObject) => {
-          
-          
           return (
             <Link to={`/object/${oneObject.id}`}>
               <div
@@ -71,7 +109,9 @@ const getInput=(fromOnClick)=>{
               >
                 <img alt="" className="darbai-img" src={oneObject.src} />
                 <div className="text-container-glass"></div>
-                <p className="textonimg">{t(`listOfObjectsLT.id${oneObject.id}.introtext`)}</p>
+                <p className="textonimg">
+                  {t(`listOfObjectsLT.id${oneObject.id}.introtext`)}
+                </p>
               </div>
             </Link>
           );

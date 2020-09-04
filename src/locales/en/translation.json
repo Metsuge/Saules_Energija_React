@@ -29,35 +29,65 @@
 
   "listOfObjectsLT": {
     "id0": {
-      "title": "Title0",
+      "title": "20 kW saulės elektrinė, Vilnius",
       "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
-      "introtext": "Text on pic"
+      "introtext": "20 kW saulės elektrinė, Vilnius"
     },
-
     "id1": {
-      "title": "Title0",
+      "title": "8,64kW saulės elektrinė, Kaunas",
       "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
-      "introtext": "Text on pic"
+      "introtext": "8,64kW saulės elektrinė, Kaunas"
     },
     "id2": {
-      "title": "Title0",
+      "title": "10,24kW saulės elektrinė, Utenos rajonas",
       "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
-      "introtext": "Text on pic"
+      "introtext": "10,24kW saulės elektrinė, Utenos rajonas"
     },
     "id3": {
-      "title": "Title0",
+      "title": "10,24kW saulės elektrinė, Kaunas",
       "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
-      "introtext": "Text on pic"
+      "introtext": "10,24kW saulės elektrinė, Kaunas"
     },
     "id4": {
-      "title": "Title0",
+      "title": "14,57kW saulės elektrinė, Rozalimas",
       "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
-      "introtext": "Text on pic"
+      "introtext": "14,57kW saulės elektrinė, Rozalimas"
+    },
+    "id5": {
+      "title": "14,57kW saulės elektrinė, Rozalimas",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "14,57kW saulės elektrinė, Rozalimas"
+    },
+    "id6": {
+      "title": "10,24kW saulės elektrinė, Kudirkos Naumiestis",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "10,24kW saulės elektrinė, Kudirkos Naumiestis"
+    },
+    "id7": {
+      "title": "6,4kW saulės elektrinė, Paruojo rajonas",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "6,4kW saulės elektrinė, Paruojo rajonas"
+    }
+    ,"id8": {
+      "title": "10,24kW saulės elektrinė, Kaišiadorių rajonas",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "10,24kW saulės elektrinė, Kaišiadorių rajonas"
+    },
+    "id9": {
+      "title": "9,9kW saulės elektrinė, Trakų rajonas",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "9,9kW saulės elektrinė, Trakų rajonas"
+    },
+    "id10": {
+      "title": "4,8kW saulės elektrinė, Prienų rajonas",
+      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
+      "introtext": "4,8kW saulės elektrinė, Prienų rajonas"
     }
   },
 
   "Projects": {
-    "title": "PROJECTS IN LITHUANIA"
+    "title": "PROJECTS IN LITHUANIA",
+    "all": "All"
   }
 
 }

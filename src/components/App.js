@@ -1,12 +1,12 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+//STYLES
 import "../Styles/style.css";
 import "../Styles/aboutStyle.css";
 import "../Styles/AnObject.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import slide3 from "../images/slide3.jpg";
-import slide4 from "../images/slide4.jpg";
-import slide5 from "../images/slide-1024x293.jpg";
 
+//COMPONENTS
 import Header from "./Header";
 import Partneriai from "./Partneriai";
 import DarbaiLT from "./DarbaiLT";
@@ -18,16 +18,50 @@ import AnObject from "./AnObject";
 
 import { withTranslation } from "react-i18next";
 
-const listOfObjectsLT = [
-  { src: slide3, id: "0", name: "Name1", pic2: slide4, tag: "2002" },
-  { src: slide4, id: "1", name: "Name2", pic2: slide4, tag: "2002" },
-  { src: slide5, id: "2", name: "Name3", pic2: slide4, tag: "2001" },
-  { src: slide5, id: "3", name: "Name3", pic2: slide4, tag: "2001" },
-  { src: slide5, id: "4", name: "Name3", pic2: slide4, tag: "2001" },
-];
+function importAll(r) {
+  return r.keys().map(r);
+}
+
+const images = importAll(
+  require.context("../images/2020/", false, /\.(png|jpe?g|svg|JPG)$/)
+);
+
+const getTheRightPic = (idOfPics) => {
+  let picture = "";
+  images.forEach((pic) => {
+    let search = pic.search(`/${idOfPics}-1`);
+    if (search > 0) picture = pic;
+  });
+  return picture;
+};
+
+const getTheListOfRightPics = (idOfPics) => {
+  let listOfPics = [];
+  images.forEach((pic) => {
+    let search = pic.search(`/${idOfPics}-`);
+    if (search > 0) listOfPics.push(pic);
+  });
+  return listOfPics;
+};
+
+let listOfObjectsLT = [];
+
+const makeDataObject = () => {
+  for (let i = 1; i < 12; i++) {
+    listOfObjectsLT.push({
+      src: getTheRightPic(i),
+      id: `${i-1}`,
+      name: "20 kW saulės elektrinė, Vilnius",
+      pics: getTheListOfRightPics(i),
+      tag: "2020",
+    });
+  }
+  return listOfObjectsLT;
+};
+
+makeDataObject();
 
 let clickeddiv = 1;
-
 class App extends Component {
   onObjectClick = (clickeddivffromdarbai) => {
     clickeddiv = clickeddivffromdarbai;
@@ -45,7 +79,11 @@ class App extends Component {
               path="/object/:id"
               exact
               component={() => (
-                <AnObject t={t} list={listOfObjectsLT} number={clickeddiv} />
+                <AnObject
+                  t={t}
+                  listOfObjectsLT={listOfObjectsLT}
+                  number={clickeddiv}
+                />
               )}
             />
             <Route path="/about" exact component={About} />

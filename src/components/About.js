@@ -2,7 +2,7 @@ import React from "react";
 // import { useTranslation} from 'react-i18next';
 import { withTranslation } from 'react-i18next';
 
-const About = ({ t}) => {
+const About = ({ t }) => {
 
   // const { t, i18n } = useTranslation();
 

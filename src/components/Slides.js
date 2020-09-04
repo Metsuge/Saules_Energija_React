@@ -6,11 +6,11 @@ import Slider from 'react-slick';
 import '../slick-1.8.1/slick/slick.css'
 
 
-import Photo1 from '../images/231-960x350.jpg';
-import Photo2 from '../images/232-960x350.jpg';
-import Photo3 from '../images/233-960x350.jpg';
-import Photo4 from '../images/238-960x350.jpg';
-import Photo5 from '../images/239-960x350.jpg';
+import Photo1 from '../images/slides/231-960x350.jpg';
+import Photo2 from '../images/slides/232-960x350.jpg';
+import Photo3 from '../images/slides/233-960x350.jpg';
+import Photo4 from '../images/slides/238-960x350.jpg';
+import Photo5 from '../images/slides/239-960x350.jpg';
 
 
 const photos = [
