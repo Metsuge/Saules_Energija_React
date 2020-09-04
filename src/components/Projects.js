@@ -35,7 +35,7 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
   const ObjectsToRender = () => {
     selectedList = [];    //list of objects to be rendered
     //addClass()
-    for (let i = 0; i < listOfObjectsLT.length; i++) {     
+    for (let i = 0; i < 16; i++) {     
       if (listOfObjectsLT[i].tag === objectTag){
         selectedList.push(listOfObjectsLT[i]);
       }

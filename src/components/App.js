@@ -22,44 +22,50 @@ function importAll(r) {
   return r.keys().map(r);
 }
 
-const images = importAll(
+const images20 = importAll(
   require.context("../images/2020/", false, /\.(png|jpe?g|svg|JPG)$/)
 );
 
-const getTheRightPic = (idOfPics) => {
+// const images19 = importAll(
+//   require.context("../images/2019/", false, /\.(png|jpe?g|svg|JPG)$/)
+// );
+
+
+const getTheRightPic = (idOfPics, importedPic) => {
   let picture = "";
-  images.forEach((pic) => {
+  importedPic.forEach((pic) => {
     let search = pic.search(`/${idOfPics}-1`);
     if (search > 0) picture = pic;
   });
   return picture;
 };
 
-const getTheListOfRightPics = (idOfPics) => {
+const getTheListOfRightPics = (idOfPics, importedPic) => {
   let listOfPics = [];
-  images.forEach((pic) => {
+  importedPic.forEach((pic) => {
     let search = pic.search(`/${idOfPics}-`);
-    if (search > 0) listOfPics.push(pic);
+    if (search > 0 ) listOfPics.push(pic);
   });
+  
   return listOfPics;
 };
 
 let listOfObjectsLT = [];
 
-const makeDataObject = () => {
-  for (let i = 1; i < 12; i++) {
+const makeDataObject = (nrOfProjects) => {
+  for (let i = 1; i < nrOfProjects+1; i++) {
     listOfObjectsLT.push({
-      src: getTheRightPic(i),
+      src: getTheRightPic(i, images20),
       id: `${i-1}`,
-      name: "20 kW saulės elektrinė, Vilnius",
-      pics: getTheListOfRightPics(i),
+      pics: getTheListOfRightPics(i, images20),
       tag: "2020",
     });
   }
   return listOfObjectsLT;
 };
 
-makeDataObject();
+makeDataObject(11);
+console.log(listOfObjectsLT);
 
 let clickeddiv = 1;
 class App extends Component {
