@@ -15,9 +15,9 @@
   "contacts": {
     "title": "CONTACTS",
     "phone": "Phones:",
-    "email": "Email",
+    "email": "Email:",
     "adress": "Adress:",
-    "details": "Details",
+    "details": "Details:",
     "comp_code": "Company code:",
     "VAT": "VAT:"
   },

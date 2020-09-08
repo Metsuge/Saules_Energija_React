@@ -3,16 +3,16 @@ import { GoogleMap, withScriptjs, withGoogleMap } from "react-google-maps";
 
 import { withTranslation } from 'react-i18next';
 
-function Map() {
-  return (
-    <GoogleMap
-      defaultZoom={10}
-      defaultCenter={{ lat: 54.903734, lng: 23.746612 }}
-    />
-  );
-}
+// function Map() {
+//   return (
+//     <GoogleMap
+//       defaultZoom={10}
+//       defaultCenter={{ lat: 54.903734, lng: 23.746612 }}
+//     />
+//   );
+// }
 
-const WrappedMap = withScriptjs(withGoogleMap(Map));
+// const WrappedMap = withScriptjs(withGoogleMap(Map));
 
 const Contacts = ({ t }) => {
   return (
@@ -41,7 +41,7 @@ const Contacts = ({ t }) => {
             <p id="VAT">{t('contacts.VAT')} LT100007003016</p>
           </li>
         </ul>
-        <div className="map">
+        {/* <div className="map">
           <WrappedMap
             googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&
                 libraries=geometry,drawing,places&key=AIzaSyBcbNh4TTSkxDMs0mUuuBYGJqIpB7YcKfE`}
@@ -49,7 +49,7 @@ const Contacts = ({ t }) => {
             mapElement={<div style={{ height: "100%" }}></div>}
             containerElement={<div style={{ height: "100%" }}></div>}
           />
-        </div>
+        </div> */}
       </div>
     </>
   );

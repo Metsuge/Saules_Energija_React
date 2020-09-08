@@ -32,22 +32,22 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
     
   }
 
-  const ObjectsToRender = () => {
-    selectedList = [];    //list of objects to be rendered
-    //addClass()
-    for (let i = 0; i < 16; i++) {     
-      if (listOfObjectsLT[i].tag === objectTag){
-        selectedList.push(listOfObjectsLT[i]);
-      }
-    }   
-  };
+  // const ObjectsToRender = () => {
+  //   selectedList = [];    //list of objects to be rendered
+  //   //addClass()
+  //   for (let i = 0; i < 16; i++) {     
+  //     if (listOfObjectsLT[i].tag === objectTag){
+  //       selectedList.push(listOfObjectsLT[i]);
+  //     }
+  //   }   
+  // };
 
 
   //onclick paleidziamos funkcijos
   const getInput = (fromOnClick) => {
     input = fromOnClick;
     changeState();
-    ObjectsToRender();
+    // ObjectsToRender();
     getTagList();
   };
   
@@ -71,7 +71,7 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
             </button>
           </li>
           <li>
-            <button
+            {/* <button
               className="tag_button"
               id="2001"
               type="button"
@@ -81,10 +81,10 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
               }}
             >
               2001
-            </button>
+            </button> */}
           </li>
           <li>
-            <button
+            {/* <button
               className="tag_button 2020"
               id="2020"
               type="button"
@@ -94,7 +94,7 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
               }}
             >
               2020
-            </button>
+            </button> */}
           </li>
         </ul>
       </div>
