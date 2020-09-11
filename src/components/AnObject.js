@@ -20,9 +20,9 @@ function AnObject({ listOfObjectsLT, number, t }) {
           })}
         </div>
 
-        <p className="object-text">
+        {/* <p className="object-text">
           {t(`listOfObjectsLT.id${listOfObjectsLT[number].id}.text`)}
-        </p>
+        </p> */}
       </div>
     </>
   );

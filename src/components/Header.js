@@ -94,12 +94,12 @@ class Header extends Component {
               >
                 <li className="underline">{t("header.contacts")}</li>
               </Link>
-              <Link
+              {/* <Link
                 to="/partners"
                 style={{ color: "inherit", textDecoration: "none" }}
               >
                 <li className="underline">{t("header.partners")}</li>
-              </Link>
+              </Link> */}
               <Link
                 style={{ color: "inherit", textDecoration: "none" }}
                 to="/about"

@@ -26,9 +26,14 @@ const images20 = importAll(
   require.context("../images/2020/", false, /\.(png|jpe?g|svg|JPG)$/)
 );
 
-// const images19 = importAll(
-//   require.context("../images/2019/", false, /\.(png|jpe?g|svg|JPG)$/)
-// );
+
+const images19 = importAll(
+  require.context("../images/2019/", false, /\.(png|jpe?g|svg|JPG)$/)
+);
+
+
+
+
 
 
 const getTheRightPic = (idOfPics, importedPic) => {
@@ -52,20 +57,33 @@ const getTheListOfRightPics = (idOfPics, importedPic) => {
 
 let listOfObjectsLT = [];
 
-const makeDataObject = (nrOfProjects) => {
+
+
+let id = 0;
+
+const generateId = () => {
+  return id++
+}
+
+const makeDataObject = (nrOfProjects, importedPic, year) => {
   for (let i = 1; i < nrOfProjects+1; i++) {
     listOfObjectsLT.push({
-      src: getTheRightPic(i, images20),
-      id: `${i-1}`,
-      pics: getTheListOfRightPics(i, images20),
-      tag: "2020",
+      src: getTheRightPic(i, importedPic),
+      // id: `${i-1}`,
+      id: generateId(),
+      pics: getTheListOfRightPics(i, importedPic),
+      tag: "20" + year,
     });
   }
   return listOfObjectsLT;
 };
 
-makeDataObject(11);
+makeDataObject(11, images20, 20);
+makeDataObject(17, images19, 19);
+
 console.log(listOfObjectsLT);
+
+
 
 let clickeddiv = 1;
 class App extends Component {

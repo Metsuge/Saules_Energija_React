@@ -30,58 +30,115 @@
   "listOfObjectsLT": {
     "id0": {
       "title": "20 kW saulės elektrinė, Vilnius",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
       "introtext": "20 kW saulės elektrinė, Vilnius"
     },
     "id1": {
       "title": "8,64kW saulės elektrinė, Kaunas",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
       "introtext": "8,64kW saulės elektrinė, Kaunas"
     },
     "id2": {
       "title": "10,24kW saulės elektrinė, Utenos rajonas",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
       "introtext": "10,24kW saulės elektrinė, Utenos rajonas"
     },
     "id3": {
       "title": "10,24kW saulės elektrinė, Kaunas",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
       "introtext": "10,24kW saulės elektrinė, Kaunas"
     },
     "id4": {
       "title": "14,57kW saulės elektrinė, Rozalimas",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
       "introtext": "14,57kW saulės elektrinė, Rozalimas"
     },
     "id5": {
       "title": "14,57kW saulės elektrinė, Rozalimas",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
       "introtext": "14,57kW saulės elektrinė, Rozalimas"
     },
     "id6": {
       "title": "10,24kW saulės elektrinė, Kudirkos Naumiestis",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
       "introtext": "10,24kW saulės elektrinė, Kudirkos Naumiestis"
     },
     "id7": {
       "title": "6,4kW saulės elektrinė, Paruojo rajonas",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
       "introtext": "6,4kW saulės elektrinė, Paruojo rajonas"
     }
     ,"id8": {
       "title": "10,24kW saulės elektrinė, Kaišiadorių rajonas",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
       "introtext": "10,24kW saulės elektrinė, Kaišiadorių rajonas"
     },
     "id9": {
       "title": "9,9kW saulės elektrinė, Trakų rajonas",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
       "introtext": "9,9kW saulės elektrinė, Trakų rajonas"
     },
     "id10": {
       "title": "4,8kW saulės elektrinė, Prienų rajonas",
-      "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dictasunt explicabo.",
       "introtext": "4,8kW saulės elektrinė, Prienų rajonas"
+    },
+    "id11": { 
+      "title": "11,655kW saulės elektrinė, Kauno rajonas",
+      "introtext": "11,655kW saulės elektrinė, Kauno rajonas"
+    },
+    "id12": {
+      "title": "4,93kW saulės elektrinė, Jonavos rajonas",
+      "introtext": "4,93kW saulės elektrinė, Jonavos rajonas"
+    },
+    "id13": {
+      "title": "14,49kW saulės elektrinė, Kauno rajonas",
+      "introtext": "14,49kW saulės elektrinė, Kauno rajonas"
+    },
+    "id14": {
+      "title": "14,49kW saulės elektrinė, Kauno rajonas",
+      "introtext": "14,49kW saulės elektrinė, Kauno rajonas"
+    },
+    "id15": {
+      "title": "9,765kW saulės elektrinė, Kauno rajonas",
+      "introtext": "9,765kW saulės elektrinė, Kauno rajonas"
+    },
+    "id16": {
+      "title": "14,49kW saulės elektrinė, Kauno rajonas",
+      "introtext": "14,49kW saulės elektrinė, Kauno rajonas"
+    },
+    "id17": {
+      "title": "9,135kW saulės elektrinė, Kauno rajonas",
+      "introtext": "9,135kW saulės elektrinė, Kauno rajonas"
+    },
+    "id18": {
+      "title": "3kW saulės elektrinė, Jonava",
+      "introtext": "3kW saulės elektrinė, Jonava"
+    },
+    "id19": {
+      "title": "6,195 saulės elektrinė, Marijampolė",
+      "introtext": "6,195 saulės elektrinė, Marijampolė"
+    },
+    "id20": {
+      "title": "9,44kW saulės elektrinė, Pakruojis",
+      "introtext": "9,44kW saulės elektrinė, Pakruojis"
+    },
+    "id21": {
+      "title": "9,735 saulės elektrinė, Kauno rajonas",
+      "introtext": "9,735 saulės elektrinė, Kauno rajonas"
+    },
+    "id22": {
+      "title": "9,735 saulės elektrinė, Jonavos rajonas",
+      "introtext": "9,735 saulės elektrinė, Jonavos rajonas"
+    },
+    "id23": {
+      "title": "7,02kW saulės elektrinė, Kaunas",
+      "introtext": "7,02kW saulės elektrinė, Kaunas"
+    },
+    "id24": {
+      "title": "8,175kW saulės elektrinė, Kaunas",
+      "introtext": "8,175kW saulės elektrinė, Kaunas"
+    },
+    "id25": {
+      "title": "6,93kW saulės elektrinė, Kaunas",
+      "introtext": "6,93kW saulės elektrinė, Kaunas"
+    },
+    "id26": {
+      "title": "13,545 saulės elektrinė, Švenčionių rajonas",
+      "introtext": "13,545 saulės elektrinė, Švenčionių rajonas"
+    },
+    "id27": {
+      "title": "7,245kW saulės elektrinė, Panevėžys",
+      "introtext": "7,245kW saulės elektrinė, Panevėžys"
     }
   },
 
