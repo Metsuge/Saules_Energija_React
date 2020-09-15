@@ -6,11 +6,10 @@ import Slider from 'react-slick';
 import '../slick-1.8.1/slick/slick.css'
 
 
-import Photo1 from '../images/slides/231-960x350.jpg';
-import Photo2 from '../images/slides/232-960x350.jpg';
-import Photo3 from '../images/slides/233-960x350.jpg';
-import Photo4 from '../images/slides/238-960x350.jpg';
-import Photo5 from '../images/slides/239-960x350.jpg';
+
+import Photo1 from '../images/slides/rsz_8-1.jpg';
+import Photo2 from '../images/slides/rsz_6-2.jpg';
+import Photo3 from '../images/slides/rsz_231-960x350.jpg';
 
 
 const photos = [
@@ -26,14 +25,14 @@ const photos = [
     name: "Photo 3",
     url: Photo3,
   },
-  {
-    name: "Photo 4",
-    url: Photo4,
-  },
-  {
-    name: "Photo 5",
-    url: Photo5,
-  },
+  // {
+  //   name: "Photo 4",
+  //   url: Photo4,
+  // },
+  // {
+  //   name: "Photo 5",
+  //   url: Photo5,
+  // },
 ];
 
 class Slides extends Component {
