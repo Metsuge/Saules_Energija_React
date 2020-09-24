@@ -4,13 +4,13 @@
     width: 90%;
 
     display: flex;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .object-img{
     margin:10px;
-    width:90%;
-    height: 60%;
+    width:50%;
+    height: auto;
     border: 1px solid darkgrey;
 }
 
@@ -22,10 +22,74 @@
 
 
 .img-object-div{
-    display: flex;
-    flex-direction: column;
-    
+    /* display: flex; */
+    flex-direction: row;
+    width:inherit;
 }
+
+.main-section-Projects{
+    position: relative;
+}
+
+
+
+.each-img {
+    overflow: hidden;
+    width: 50vh;
+    height: 50vh;
+    margin: 10px;
+    border: 5px solid transparent;
+    position: relative;
+    flex-basis: 33%;
+  }
+  
+  .darbai-img {
+    width: auto;
+    height: 90%;
+  }
+
+  .text-section{
+    position:absolute;
+    bottom:0px;
+    /* border:1px solid black; */
+ }
+  .textonimg {
+    font-weight: bolder;
+    color: black;
+    font-size: 3vh;
+  }
+
+
+  .img-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-around; 
+  }
+
+  .DarbaiLT-about-section{
+    border:1px solid black;
+    width: 100%;
+    margin:auto;
+    height: 150px; 
+    padding: 30px;
+    background-color: #243F54;
+  }
+
+  .intro-about{
+    font-size: 10vh;
+    color:white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+  }
+
+/* .pagrindinis-div{
+  background-image: url('../images/Dreamstale_15.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
 
 @media only screen and (max-width: 875px) {
     .object-div{

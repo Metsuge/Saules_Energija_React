@@ -1,10 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { withTranslation } from "react-i18next";
 
 //STYLES
 import "../Styles/style.css";
 import "../Styles/aboutStyle.css";
 import "../Styles/AnObject.css";
+
 
 //COMPONENTS
 import Header from "./Header";
@@ -16,7 +18,6 @@ import Contacts from "./Contacts";
 import Projects from "./Projects";
 import AnObject from "./AnObject";
 
-import { withTranslation } from "react-i18next";
 
 function importAll(r) {
   return r.keys().map(r);
@@ -31,6 +32,7 @@ const images19 = importAll(
   require.context("../images/2019/", false, /\.(png|jpe?g|svg|JPG)$/)
 );
 
+//main photo of the project
 const getTheRightPic = (idOfPics, importedPic) => {
   let picture = "";
   importedPic.forEach((pic) => {
@@ -40,6 +42,7 @@ const getTheRightPic = (idOfPics, importedPic) => {
   return picture;
 };
 
+//the rest of the photos for the project
 const getTheListOfRightPics = (idOfPics, importedPic) => {
   let listOfPics = [];
   importedPic.forEach((pic) => {
@@ -49,15 +52,17 @@ const getTheListOfRightPics = (idOfPics, importedPic) => {
   
   return listOfPics;
 };
-
+// the list of all the photos, witch is passed as props to components
 let listOfObjectsLT = [];
 
 let id = 0;
-
 const generateId = () => {
   return id++
 }
 
+//nrOfProjects - how many projects in the images folder
+//importedPic - variable with imported pics
+//year - year of the projects, used to create tags on each pic
 const makeDataObject = (nrOfProjects, importedPic, year) => {
   for (let i = 1; i < nrOfProjects+1; i++) {
     listOfObjectsLT.push({
@@ -71,7 +76,7 @@ const makeDataObject = (nrOfProjects, importedPic, year) => {
   return listOfObjectsLT;
 };
 
-makeDataObject(11, images20, 20);
+makeDataObject(12, images20, 20);
 makeDataObject(17, images19, 19);
 
 let clickeddiv = 1;

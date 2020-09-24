@@ -7,7 +7,7 @@ import email from '../images/email.svg';
 const Footer = () => {
   return (
     <>
-      <footer>
+      <footer className="footer-main">
         <div className="main-footer">
           <ul className="footer-list">
             <li>
@@ -19,7 +19,7 @@ const Footer = () => {
             <li>
               <img alt="email" src={email} />
             </li>
-            <li>saulesenergija@gmail.com</li>
+            <li>edmundaszilinskas@gmail.com</li>
           </ul>
         </div>
       </footer>

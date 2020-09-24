@@ -23,7 +23,7 @@
   },
 
   "DarbaiLT": {
-    "title": "DARBAI LIETUVOJE",
+    "title": "PROJEKTAI LIETUVOJE",
     "linkToProj": "VISI PROJEKTAI"
   },
 
@@ -37,8 +37,8 @@
       "introtext": "8,64kW saulės elektrinė, Kaunas"
     },
     "id2": {
-      "title": "10,24kW saulės elektrinė, Utenos rajonas",
-      "introtext": "10,24kW saulės elektrinė, Utenos rajonas"
+      "title": "10,24kW saulės elektrinė, Utena",
+      "introtext": "10,24kW saulės elektrinė, Utena"
     },
     "id3": {
       "title": "10,24kW saulės elektrinė, Kaunas",
@@ -53,52 +53,52 @@
       "introtext": "14,57kW saulės elektrinė, Rozalimas"
     },
     "id6": {
-      "title": "10,24kW saulės elektrinė, Kudirkos Naumiestis",
-      "introtext": "10,24kW saulės elektrinė, Kudirkos Naumiestis"
+      "title": "10,24kW saulės elektrinė, Šakiai",
+      "introtext": "10,24kW saulės elektrinė, Šakiai"
     },
     "id7": {
       "title": "6,4kW saulės elektrinė, Paruojo rajonas",
-      "introtext": "6,4kW saulės elektrinė, Paruojo rajonas"
+      "introtext": "6,4kW saulės elektrinė, Paruojis"
     }
     ,"id8": {
-      "title": "10,24kW saulės elektrinė, Kaišiadorių rajonas",
-      "introtext": "10,24kW saulės elektrinė, Kaišiadorių rajonas"
+      "title": "10,24kW saulės elektrinė, Kaišiadoriai",
+      "introtext": "10,24kW saulės elektrinė, Kaišiadoriai"
     },
     "id9": {
       "title": "9,9kW saulės elektrinė, Trakų rajonas",
-      "introtext": "9,9kW saulės elektrinė, Trakų rajonas"
+      "introtext": "9,9kW saulės elektrinė, Trakai"
     },
     "id10": {
       "title": "4,8kW saulės elektrinė, Prienų rajonas",
-      "introtext": "4,8kW saulės elektrinė, Prienų rajonas"
+      "introtext": "4,8kW saulės elektrinė, Prienai"
     },
     "id11": { 
       "title": "11,655kW saulės elektrinė, Kauno rajonas",
-      "introtext": "11,655kW saulės elektrinė, Kauno rajonas"
+      "introtext": "11,655kW saulės elektrinė, Kaunas"
     },
     "id12": {
       "title": "4,93kW saulės elektrinė, Jonavos rajonas",
-      "introtext": "4,93kW saulės elektrinė, Jonavos rajonas"
+      "introtext": "4,93kW saulės elektrinė, Jonava"
     },
     "id13": {
       "title": "14,49kW saulės elektrinė, Kauno rajonas",
-      "introtext": "14,49kW saulės elektrinė, Kauno rajonas"
+      "introtext": "14,49kW saulės elektrinė, Kaunas"
     },
     "id14": {
       "title": "14,49kW saulės elektrinė, Kauno rajonas",
-      "introtext": "14,49kW saulės elektrinė, Kauno rajonas"
+      "introtext": "14,49kW saulės elektrinė, Kaunas"
     },
     "id15": {
       "title": "9,765kW saulės elektrinė, Kauno rajonas",
-      "introtext": "9,765kW saulės elektrinė, Kauno rajonas"
+      "introtext": "9,765kW saulės elektrinė, Kaunas"
     },
     "id16": {
       "title": "14,49kW saulės elektrinė, Kauno rajonas",
-      "introtext": "14,49kW saulės elektrinė, Kauno rajonas"
+      "introtext": "14,49kW saulės elektrinė, Kaunas"
     },
     "id17": {
       "title": "9,135kW saulės elektrinė, Kauno rajonas",
-      "introtext": "9,135kW saulės elektrinė, Kauno rajonas"
+      "introtext": "9,135kW saulės elektrinė, Kaunas"
     },
     "id18": {
       "title": "3kW saulės elektrinė, Jonava",
@@ -114,11 +114,11 @@
     },
     "id21": {
       "title": "9,735 saulės elektrinė, Kauno rajonas",
-      "introtext": "9,735 saulės elektrinė, Kauno rajonas"
+      "introtext": "9,735 saulės elektrinė, Kaunas"
     },
     "id22": {
       "title": "9,735 saulės elektrinė, Jonavos rajonas",
-      "introtext": "9,735 saulės elektrinė, Jonavos rajonas"
+      "introtext": "9,735 saulės elektrinė, Jonava"
     },
     "id23": {
       "title": "7,02kW saulės elektrinė, Kaunas",
@@ -134,7 +134,7 @@
     },
     "id26": {
       "title": "13,545 saulės elektrinė, Švenčionių rajonas",
-      "introtext": "13,545 saulės elektrinė, Švenčionių rajonas"
+      "introtext": "13,545 saulės elektrinė, Švenčioniai"
     },
     "id27": {
       "title": "7,245kW saulės elektrinė, Panevėžys",

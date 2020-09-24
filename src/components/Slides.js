@@ -51,7 +51,7 @@ class Slides extends Component {
     return (
       
       <div className="main-img">
-        <Slider {...settings}>
+        {/* <Slider {...settings}>
           {photos.map(photo => {
             return (
               <div>
@@ -59,7 +59,7 @@ class Slides extends Component {
               </div>
             );
           })}
-        </Slider>
+        </Slider> */}
       </div>
     );
   }

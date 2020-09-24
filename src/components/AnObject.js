@@ -11,6 +11,7 @@ function AnObject({ listOfObjectsLT, number, t }) {
         {t(`listOfObjectsLT.id${listOfObjectsLT[number].id}.title`)}
       </p>
       <div className="object-div">
+        
         <div className="img-object-div">
           <img alt="img" className="object-img" src={s} width="40%" />
           {listOfAdditionalPics.map((pic) => {

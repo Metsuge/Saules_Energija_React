@@ -2,21 +2,19 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { withTranslation } from "react-i18next";
 
-
 import "../Styles/buttons.css";
 let selectedList = [];
 
 const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
   let [objectTag, setTag] = useState("all");
   let input = null;
-  
+
   //setting the state
   const changeState = () => setTag((objectTag = input));
 
-  if(objectTag === 'all'){
-    selectedList = listOfObjectsLT
+  if (objectTag === "all") {
+    selectedList = listOfObjectsLT;
   }
-
 
   //uzdeda pilka kai paspaudi, galima pasirinkti kelis tagus
   // const addClass = () =>{
@@ -25,23 +23,21 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
   //   clickedBtn.classList.toggle('active_button')
   // }
 
-  const objectTagList = [''];
+  const objectTagList = [""];
 
   const getTagList = () => {
-    objectTagList.push(objectTag)
-    
-  }
-
-  const ObjectsToRender = () => {
-    selectedList = [];    //list of objects to be rendered
-    //addClass()
-    for (let i = 0; i < listOfObjectsLT.length; i++) {     
-      if (listOfObjectsLT[i].tag === objectTag){
-        selectedList.push(listOfObjectsLT[i]);
-      }
-    }   
+    objectTagList.push(objectTag);
   };
 
+  const ObjectsToRender = () => {
+    selectedList = []; //list of objects to be rendered
+    //addClass()
+    for (let i = 0; i < listOfObjectsLT.length; i++) {
+      if (listOfObjectsLT[i].tag === objectTag) {
+        selectedList.push(listOfObjectsLT[i]);
+      }
+    }
+  };
 
   //onclick paleidziamos funkcijos
   const getInput = (fromOnClick) => {
@@ -50,7 +46,7 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
     ObjectsToRender();
     getTagList();
   };
-  
+
   return (
     <>
       <p className="h2">{t("DarbaiLT.title")}</p>
@@ -59,7 +55,7 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
         <ul className="buttonList">
           <li>
             <button
-              className="tag_button" 
+              className="tag_button"
               id="all"
               type="button"
               name="all"
@@ -105,13 +101,17 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
             <Link to={`/object/${oneObject.id}`}>
               <div
                 onClick={() => onObjectClick(oneObject.id)}
-                className="each-img img1"
+                className="each-img"
               >
-                <img alt="" className="darbai-img" src={oneObject.src} />
-                <div className="text-container-glass"></div>
-                <p className="textonimg">
-                  {t(`listOfObjectsLT.id${oneObject.id}.introtext`)}
-                </p>
+                
+                  <img alt="" className="darbai-img" src={oneObject.src} />
+              
+
+                <div className="text-section">
+                  <p className="textonimg">
+                    {t(`listOfObjectsLT.id${oneObject.id}.introtext`)}
+                  </p>
+                </div>
               </div>
             </Link>
           );

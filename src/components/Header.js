@@ -55,6 +55,7 @@ class Header extends Component {
     return (
       <>
         <header>
+          <div className="header-top-bit"></div>
           <ul id="nav-list">
             <div className="flags">
               <img
