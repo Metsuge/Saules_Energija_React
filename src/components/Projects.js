@@ -5,7 +5,7 @@ import { withTranslation } from "react-i18next";
 import "../Styles/buttons.css";
 let selectedList = [];
 
-const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
+const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
   let [objectTag, setTag] = useState("all");
   let input = null;
 
@@ -49,73 +49,75 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
 
   return (
     <>
-      <p className="h2">{t("DarbaiLT.title")}</p>
-
-      <div>
-        <ul className="buttonList">
-          <li>
-            <button
-              className="tag_button"
-              id="all"
-              type="button"
-              name="all"
-              onClick={(e) => {
-                getInput(e.target.name);
-              }}
-            >
-              {t("Projects.all")}
-            </button>
-          </li>
-          <li>
-            <button
-              className="tag_button"
-              id="2019"
-              type="button"
-              name="2019"
-              onClick={(e) => {
-                getInput(e.target.name);
-              }}
-            >
-              2019
-            </button>
-          </li>
-          <li>
-            <button
-              className="tag_button 2020"
-              id="2020"
-              type="button"
-              name="2020"
-              onClick={(e) => {
-                getInput(e.target.name);
-              }}
-            >
-              2020
-            </button>
-          </li>
-        </ul>
-      </div>
-
-      <div className="img-section">
-        {selectedList.map((oneObject) => {
-          return (
-            <Link to={`/object/${oneObject.id}`}>
-              <div
-                onClick={() => onObjectClick(oneObject.id)}
-                className="each-img"
+      <div onLoad={onLoad()}>
+        <p className="h2">{t("DarbaiLT.title")}</p>
+  
+        <div>
+          <ul className="buttonList">
+            <li>
+              <button
+                className="tag_button"
+                id="all"
+                type="button"
+                name="all"
+                onClick={(e) => {
+                  getInput(e.target.name);
+                }}
               >
+                {t("Projects.all")}
+              </button>
+            </li>
+            <li>
+              <button
+                className="tag_button"
+                id="2019"
+                type="button"
+                name="2019"
+                onClick={(e) => {
+                  getInput(e.target.name);
+                }}
+              >
+                2019
+              </button>
+            </li>
+            <li>
+              <button
+                className="tag_button 2020"
+                id="2020"
+                type="button"
+                name="2020"
+                onClick={(e) => {
+                  getInput(e.target.name);
+                }}
+              >
+                2020
+              </button>
+            </li>
+          </ul>
+        </div>
+  
+        <div className="img-section">
+          {selectedList.map((oneObject) => {
+            return (
+              <Link to={`/object/${oneObject.id}`}>
+                <div
+                  onClick={() => onObjectClick(oneObject.id)}
+                  className="each-img"
+                >
+                  
+                    <img alt="" className="darbai-img" src={oneObject.src} />
                 
-                  <img alt="" className="darbai-img" src={oneObject.src} />
-              
-
-                <div className="text-section">
-                  <p className="textonimg">
-                    {t(`listOfObjectsLT.id${oneObject.id}.introtext`)}
-                  </p>
+  
+                  <div className="text-section">
+                    <p className="textonimg">
+                      {t(`listOfObjectsLT.id${oneObject.id}.introtext`)}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          );
-        })}
+              </Link>
+            );
+          })}
+        </div>
       </div>
     </>
   );

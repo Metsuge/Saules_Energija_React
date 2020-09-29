@@ -78,9 +78,20 @@
   }
 
   .intro-about{
-    font-size: 10vh;
+    font-size: 5vh;
     color:white;
     font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+  }
+
+  .intro-p{
+    color:white;
+    font-size: 3vh;
+    padding:10px;
+    width:50%;
+    margin:auto;
     text-align: center;
   }
 

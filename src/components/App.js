@@ -6,6 +6,7 @@ import { withTranslation } from "react-i18next";
 import "../Styles/style.css";
 import "../Styles/aboutStyle.css";
 import "../Styles/AnObject.css";
+import "../Styles/Footer.css";
 
 
 //COMPONENTS
@@ -18,6 +19,9 @@ import Contacts from "./Contacts";
 import Projects from "./Projects";
 import AnObject from "./AnObject";
 
+const onLoad = () =>{
+  window.scroll(0,0)
+}
 
 function importAll(r) {
   return r.keys().map(r);
@@ -98,20 +102,34 @@ class App extends Component {
               exact
               component={() => (
                 <AnObject
+                  onLoad={onLoad}
                   t={t}
                   listOfObjectsLT={listOfObjectsLT}
                   number={clickeddiv}
                 />
               )}
             />
-            <Route path="/about" exact component={About} />
-            <Route path="/contacts" exact component={Contacts} />
+            <Route 
+              path="/about" 
+              exact
+              component={() => (
+                <About
+                onLoad={onLoad}
+                 /> 
+                 )}
+              />
+            <Route path="/contacts" exact component={() => (
+                <Contacts
+                  onLoad={onLoad}
+                />
+              )} />
             <Route path="/partners" exact component={Partneriai} />
             <Route
               path="/projects"
               exact
               component={() => (
                 <Projects
+                  onLoad={onLoad}
                   number={clickeddiv}
                   onObjectClick={this.onObjectClick}
                   listOfObjectsLT={listOfObjectsLT}
@@ -131,9 +149,11 @@ class App extends Component {
               )}
             />
           </Switch>
-          <div className="App-footer">
-            <Footer />
-          </div>
+        
+            <Footer
+            t={t} i18n={i18n}
+            />
+          
         </div>
       </Router>
     );
