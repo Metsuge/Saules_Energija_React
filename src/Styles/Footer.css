@@ -35,8 +35,8 @@ footer {
 #nav-footer {
   visibility: visible;
   display: flex;
-  /* width: 130px; */
-  /* margin: auto; */
+  width: 150vh;
+  margin: auto;
   /* position: absolute; */
   bottom: 10px;
   right: 100px;
@@ -53,9 +53,10 @@ footer {
 
 .rights{
   margin:auto;
-  width:250px;
+  width:80%;
   text-align: center;
   padding:15px;
+  border-top: 1px solid white;
 }
 
 .footer-rekvizitai{
@@ -67,13 +68,33 @@ footer {
   padding:10px;
 }
 
-@media only screen and (max-width: 800px) {
+.column li{
+  margin: 0 30px 40px 0;
+}
+
+.column{
+  width:100%;
+}
+
+.menu-columns{
+  display: flex;
+  padding-top: 50px;
+  width:50%;
+}
+
+@media only screen and (max-width: 900px) {
   #nav-footer{
     flex-direction: column !important;
     text-align: center;
+    width:inherit;
   }
 
   .main-footer{
     width:100%;
+  }
+
+  .menu-columns{
+    display: unset;
+    margin: auto;
   }
 }

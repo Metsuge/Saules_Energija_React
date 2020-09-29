@@ -70,7 +70,7 @@
 
   .DarbaiLT-about-section{
     border:1px solid black;
-    width: 100%;
+    width: inherit;
     margin:auto;
     height: 150px; 
     padding: 30px;
@@ -84,6 +84,9 @@
     text-align: center;
     width: 50%;
     margin: auto;
+    letter-spacing:1px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid white;
   }
 
   .intro-p{
@@ -93,6 +96,7 @@
     width:50%;
     margin:auto;
     text-align: center;
+    letter-spacing:1px;
   }
 
 /* .pagrindinis-div{

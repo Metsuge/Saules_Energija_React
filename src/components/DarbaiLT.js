@@ -12,7 +12,7 @@ const DarbaiLT = ({ onObjectClick, t, listOfObjectsLT }) => {
       <div className="pagrindinis-div">
         <div className="DarbaiLT-about-section">
           <p className="intro-about">Saulės jėgainės</p>
-          <p className="intro-p">Daugiau nei 30 m. patirtis, aukštos kvalifikacijos personalas ir tik laiko patikrinta,
+          <p className="intro-p">Daugiau nei 30 metų patirtis, aukštos kvalifikacijos personalas ir tik laiko patikrinta,
             geriausios kokybės naudojama įranga</p>
         </div>
         <p className="h2">{t("DarbaiLT.title")}</p>
