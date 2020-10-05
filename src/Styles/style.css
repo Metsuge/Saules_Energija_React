@@ -29,7 +29,7 @@ header {
   margin-bottom: 15px;
   position: relative;
   /* background-image: linear-gradient(90deg, #dfdfdf, #f8f8f8); */
-
+background-color: #243f54;
   color: black;
 }
 
@@ -48,7 +48,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 99;
-  background-color: white;
+  background-color:#243f54;
   height: 70px;
 }
 
@@ -56,7 +56,10 @@ header {
   top: 60px;
 }
 
-
+#nav-list{
+  background-color:#243f54;
+  color:white;
+}
 
 #nav {
   visibility: visible;
@@ -118,76 +121,6 @@ header {
   width: 200px;
 }
 
-.main-img-partners {
-  display: flex;
-  width: 100%;
-  height: 150px;
-  margin-bottom: 40px;
-  justify-content: space-around;
-}
-
-.main-img-partners-each img {
-  width: 80%;
-  height: auto;
-  box-sizing: border-box;
-  margin: 15px;
-  transition: transform 0.5s ease;
-}
-
-.main-img-partners-each img:hover {
-  transform: scale(1.05);
-}
-
-.partners-name {
-  text-align: center;
-}
-
-.main-img {
-  display: flex;
-  width: 90%;
-  height: auto;
-  margin: auto;
-  position: relative;
-  margin-bottom: 30px;
-}
-
-.text-left {
-  left: 0;
-}
-
-.text-right {
-  right: 0;
-}
-
-.h2 {
-  margin: auto;
-  text-align: center;
-  margin-bottom: 20px;
-  /* background-image: linear-gradient(90deg, #e9e8e8, #f8f8f8); */
-  font-size: 43px;
-  border-radius: 9px;
-
-  color: black;
-}
-
-.partners {
-  display: flex;
-  margin: auto;
-}
-
-.partners img {
-  width: 180%;
-  height: 110%;
-}
-
-.each-img-partners {
-  overflow: hidden;
-  width: 50vh;
-  height: 50vh;
-  margin: auto;
-  border: 5px solid transparent;
-  position: relative;
-}
 
 .flags {
   padding-right: 15px;
@@ -290,15 +223,24 @@ header {
     width: 15px;
   }
 
+  header{
+    background-color: white;
+  }
+
+  #nav-list{
+    background-color: white;
+  }
+
   #nav {
     position: relative !important;
     left: 0 !important;
+    top: 0;
     margin: 0 !important;
     flex-direction: column;
     z-index: 100;
     width: 120px;
-    height: 100vh;
-    background-color: white;
+    height: 300px;
+    background-color:#243f54;
     display: none;
     justify-content: flex-start;
   }
@@ -309,7 +251,7 @@ header {
   }
 
   .scrolled {
-    position: fixed;
+    position: unset;
     width: 100%;
     z-index: 101;
     background-color: white;
@@ -331,6 +273,7 @@ header {
 @media only screen and (max-width: 1240px) {
   .underline {
     font-size: 16px;
+    margin-left: 25px;
   }
 
   .header-list {

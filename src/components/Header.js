@@ -80,6 +80,18 @@ class Header extends Component {
               ></img>
             </div>
             <nav className="nav" id="nav">
+            <Link
+                style={{ color: "inherit", textDecoration: "none" }}
+                to="/about"
+              >
+                <li className="underline">{t("header.about_us")}</li>
+              </Link>
+              <Link
+                style={{ color: "inherit", textDecoration: "none" }}
+                to="/contacts"
+              >
+                <li className="underline">{t("header.contacts")}</li>
+              </Link>
               <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
                 <li className="underline">{t("header.home")}</li>
               </Link>
@@ -89,24 +101,14 @@ class Header extends Component {
               >
                 <li className="underline">{t("header.projects")}</li>
               </Link>
+              
               <Link
-                style={{ color: "inherit", textDecoration: "none" }}
-                to="/contacts"
-              >
-                <li className="underline">{t("header.contacts")}</li>
-              </Link>
-              {/* <Link
                 to="/partners"
                 style={{ color: "inherit", textDecoration: "none" }}
               >
                 <li className="underline">{t("header.partners")}</li>
-              </Link> */}
-              <Link
-                style={{ color: "inherit", textDecoration: "none" }}
-                to="/about"
-              >
-                <li className="underline">{t("header.about_us")}</li>
               </Link>
+              
             </nav>
           </ul>
         </header>

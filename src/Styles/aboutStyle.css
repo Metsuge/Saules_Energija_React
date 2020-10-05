@@ -5,13 +5,13 @@
 
   border-radius: 9px;
   word-spacing: 10px;
-  color:black;
+  color:white;
 }
 
 .container-about {
   margin: auto;
   padding: 100px;
-  width: 60%;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -29,9 +29,10 @@
 }
 
 .about-text {
-  font-size: 18px;
-  line-height: 40px;
+  font-size: 22px;
+  line-height: 50px;
   margin-bottom: 30px;
+  
 }
 
 .map {

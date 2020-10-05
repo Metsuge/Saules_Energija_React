@@ -26,6 +26,7 @@ const Contacts = ({ t, onLoad }) => {
         <div className="mainContainer-contacts">
           <div className="container-contactsMap">
             <img
+             alt=""
               className="contact-map"
               src={zemelapis}
               width="100%"

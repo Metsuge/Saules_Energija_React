@@ -1,115 +1,179 @@
-
-.object-div{
-    margin:auto;
-    width: 90%;
-
-    display: flex;
-    /* border: 1px solid black; */
+.object-div {
+  margin: auto;
+  width: 90%;
+  display: flex;
 }
 
-.object-img{
-    margin:10px;
-    width:50%;
-    height: auto;
-    border: 1px solid darkgrey;
+.object-img {
+  margin: 10px;
+  width: 50%;
+  height: auto;
+  border: 1px solid darkgrey;
 }
 
-.object-text{
-    width: 60%;
-    height: auto;
-    margin:20px;
+.object-text {
+  width: 60%;
+  height: auto;
+  margin: 20px;
 }
 
-
-.img-object-div{
-    /* display: flex; */
-    flex-direction: row;
-    width:inherit;
+.img-object-div {
+  flex-direction: row;
+  width: inherit;
 }
 
-.main-section-Projects{
-    position: relative;
+.main-section-Projects {
+  position: relative;
 }
-
-
 
 .each-img {
-    overflow: hidden;
-    width: 50vh;
-    height: 50vh;
-    margin: 10px;
-    border: 5px solid transparent;
-    position: relative;
-    flex-basis: 33%;
-  }
+  overflow: hidden;
+  width: 50vh;
+  height: 50vh;
+  margin: 10px;
+  border: 5px solid transparent;
+  position: relative;
+  flex-basis: 33%;
+}
+
+.darbai-img {
+  width: auto;
+  height: 90%;
+}
+
+.text-section {
+  position: absolute;
+  bottom: 0px;
+  /* border:1px solid black; */
+}
+.textonimg {
+  font-weight: bolder;
+  color: black;
+  font-size: 3vh;
+}
+
+.img-section {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.DarbaiLT-about-section {
+  width: 70%;
+  margin: auto;
+  padding: 30px 30px 5px 30px;
+  position: absolute;
+  top: 0px;
+  left:11%;
+  color: black;
+  background: rgba(255, 255, 255, 0.3)
+  /* background-color: antiquewhite; */
+}
+
+.intro-about {
+  font-size: 3vw;
+  font-family: "Open Sans Condensed", sans-serif;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.intro-p {
+  font-size: 3vw;
+  padding: 10px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.cover {
+  width: 100%;
+ 
+  text-align: center;
+  display: flex;
+  position: relative;
+  display: grid;
+  height: 100%;
+}
+
+.coverimg{
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
+}
+
+.namas{
+  margin-left:30px;
+  max-width: 70%;
+  max-height: 70vh;
+  margin: auto;
   
-  .darbai-img {
-    width: auto;
-    height: 90%;
-  }
+}
 
-  .text-section{
-    position:absolute;
-    bottom:0px;
-    /* border:1px solid black; */
- }
-  .textonimg {
-    font-weight: bolder;
-    color: black;
-    font-size: 3vh;
-  }
+.cover2{
+  height: 500px;
+  text-align: center;
+  display: flex;
+  position: relative;
+  margin: 0 20px 0 20px; 
+}
 
+.partnercoverflex{
+  width: 100%;
+  height: 300px;
+  display: flex;
+  position: relative;
+}
+/* .partnercover{
+  display: flex;
+} */
 
-  .img-section {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    flex-direction: row;
-    justify-content: space-around; 
+.intro-div {
+  width: inherit;
+}
+
+.cover-photo {
+  width: 50%;
+  height: auto;
+}
+
+@media only screen and (max-width: 875px) {
+  .object-div {
+    flex-direction: column;
   }
 
   .DarbaiLT-about-section{
-    border:1px solid black;
-    width: inherit;
-    margin:auto;
-    height: 150px; 
-    padding: 30px;
-    background-color: #243F54;
+    padding: 0px 30px 5px 30px;
   }
 
-  .intro-about{
-    font-size: 5vh;
-    color:white;
-    font-family: 'Open Sans Condensed', sans-serif;
-    text-align: center;
-    width: 50%;
-    margin: auto;
-    letter-spacing:1px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid white;
+  .partnercoverflex{
+    flex-direction: column;
+    height:auto;
+    margin-bottom: 20px;
+  }
+
+  .cover2{
+    flex-direction: column;
   }
 
   .intro-p{
-    color:white;
-    font-size: 3vh;
-    padding:10px;
-    width:50%;
-    margin:auto;
-    text-align: center;
-    letter-spacing:1px;
+    font-size: 7vw;
+    width:100%;
   }
-
-/* .pagrindinis-div{
-  background-image: url('../images/Dreamstale_15.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
-
-
-@media only screen and (max-width: 875px) {
-    .object-div{
-        flex-direction: column;
-    }
-
-
+  .intro-about{
+    font-size: 8vw;
+    width:100%;
+    margin-bottom:20px;
+  }
+}
+@media only screen and (max-width: 597px) {
+  .main{
+    visibility: hidden;
+  }
 }

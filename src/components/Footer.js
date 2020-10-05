@@ -26,7 +26,7 @@ const Footer = ({ t }) => {
               <li><p style={{fontWeight: "bold"}}>UAB "Sun Lux"</p></li>
               <li>+370 688 54876</li>
               <li>edmundaszilinskas@gmail.com</li>
-              <li>{t("contacts.adress")} Ringaudų sen., Virbališkių km., Saulės g. 1, Kaunas</li>
+              <li>Ringaudų sen., Virbališkių km., Saulės g. 1, Kaunas</li>
               <li>{t("contacts.VAT")} LT100007002916</li>
               <li>{t("contacts.comp_code")} 302821529</li>
             </div>
@@ -53,6 +53,14 @@ const Footer = ({ t }) => {
               >
                 <li className="underline underline-footer">
                   {t("header.contacts")}
+                </li>
+              </Link>
+              <Link
+                style={{ color: "inherit", textDecoration: "none" }}
+                to="/partners"
+              >
+                <li className="underline underline-footer">
+                  {t("header.partners")}
                 </li>
               </Link>
               <Link

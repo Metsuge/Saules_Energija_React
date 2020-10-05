@@ -23,8 +23,8 @@
   },
 
   "DarbaiLT": {
-    "title": "NAUJAUSI PROJEKTAI",
-    "linkToProj": "VISI PROJEKTAI"
+    "title": "Naujausi projektai",
+    "linkToProj": "Visi projektai"
   },
 
   "listOfObjectsLT": {
@@ -143,7 +143,7 @@
   },
 
   "Projects": {
-    "title": "NAUJAUSI PROJEKTAI",
+    "title": "Naujausi projektai",
     "all": "Visi"
   }
 }

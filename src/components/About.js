@@ -12,14 +12,18 @@ const About = ({ t, onLoad }) => {
   return (
     <>
       <div onLoad={onLoad()}>
-        <p id="apieImone" className="h2">
+      <div className="DarbaiLT-about-section">
+      <p className="intro-about" id="apieImone" >
           {t("about.title")}
         </p>
+        <p className="intro-p">UAB "Sun lux"</p>
+        </div>
+        
         {/* <button type="button" onClick={() => changeLanguage('en')}>{t('translation:en')}</button>
       <button type="button" onClick={() => changeLanguage('lt')}>{t('translation:lt')}</button> */}
 
         <div className="container-about">
-          <p className="about-text">UAB "Sun Lux"</p>
+          {/* <p className="about-text">UAB "Sun Lux"</p> */}
           {/* <p className="about-text">
           UAB „Saulės energija” įsteigta 1991 m. Įmonę įkūrė Puslaidininkių
           fizikos instituto laboratorijos kolektyvas siekdamas praktikoje
@@ -27,8 +31,7 @@ const About = ({ t, onLoad }) => {
         </p> */}
 
           <p className="about-text">
-            Turime daugiau nei 30 m. patirtį, specializuojamės fotoelektrinių
-            modulių gamyboje, saulės, vėjo ir kombinuotų saulės – vėjo
+            Turime daugiau nei 30 m. patirtį, saulės, vėjo ir kombinuotų saulės – vėjo
             mikroelektrinių projektavime bei įrengime. Ilgametė patirtis,
             aukštos kvalifikacijos personalas ir tik laiko patikrinta,
             geriausios kokybės naudojama įranga leidžia įgyvendinti
