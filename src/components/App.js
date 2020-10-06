@@ -8,6 +8,7 @@ import "../Styles/aboutStyle.css";
 import "../Styles/AnObject.css";
 import "../Styles/Footer.css";
 import "../Styles/Partners.css";
+import "../Styles/Projects.css";
 
 
 //COMPONENTS

@@ -95,8 +95,9 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
             </li>
           </ul>
         </div>
-  
-        <div className="img-section">
+        
+        <div className="pagrindinis-div">
+        <div className="img-section-projects">
           {selectedList.map((oneObject) => {
             return (
               <Link to={`/object/${oneObject.id}`}>
@@ -117,6 +118,7 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
               </Link>
             );
           })}
+        </div>
         </div>
       </div>
     </>

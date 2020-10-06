@@ -12,7 +12,7 @@ const About = ({ t, onLoad }) => {
   return (
     <>
       <div onLoad={onLoad()}>
-      <div className="DarbaiLT-about-section">
+      <div className="about-section">
       <p className="intro-about" id="apieImone" >
           {t("about.title")}
         </p>

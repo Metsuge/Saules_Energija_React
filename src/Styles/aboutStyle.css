@@ -24,15 +24,21 @@
   line-height: 50px;
   font-size: 19px;
 }
-.contact-list p {
-  font-family: "Open Sans", sans-serif !important;
-}
+
 
 .about-text {
   font-size: 22px;
   line-height: 50px;
   margin-bottom: 30px;
-  
+}
+
+.about-section{
+  width: 70%;
+  margin: auto;
+  padding: 30px 30px 5px 30px;  
+  left:11%;
+  color: black;
+  background: rgba(255, 255, 255, 0.3)
 }
 
 .map {

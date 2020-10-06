@@ -8,6 +8,10 @@ import renusol from '../images/logo/Renusol.webp'
 import namas from "../images/namas.png";
 import background from "../images/whitesky.png";
 
+import sukasi from '../images/besisukantys.jpg';
+import linija from '../images/linijamoduliu.jpg';
+import mill from '../images/malunas.jpg';
+
 const DarbaiLT = ({ onObjectClick, t, listOfObjectsLT }) => {
   //to show only *insert nr* items in this component
   const listforDarbaiLT = listOfObjectsLT.slice(0, 6);
@@ -22,7 +26,12 @@ const DarbaiLT = ({ onObjectClick, t, listOfObjectsLT }) => {
         </div>
       </div>
       <div className="cover2">
-        <img alt="namas" className="namas" src={namas}></img>
+        <div className="cropped-pics">
+        <img alt="namas" src={linija} className="namas" ></img>
+          <img alt="namas" src={sukasi} className="namas" ></img>
+          <img alt="namas" src={mill} className="namas" ></img>
+          <img alt="namas" src={namas} className="namas" ></img>
+        </div>
         <p className="intro-p">
           Daugiau nei 30 metų patirtis, aukštos kvalifikacijos personalas ir tik
           laiko patikrinta, geriausios kokybės naudojama įranga
@@ -72,11 +81,11 @@ const DarbaiLT = ({ onObjectClick, t, listOfObjectsLT }) => {
                 >
                   <img alt="" className="darbai-img" src={oneObject.src} />
 
-                  <div className="text-section">
+                  {/* <div className="text-section">
                     <p className="textonimg">
                       {t(`listOfObjectsLT.id${oneObject.id}.introtext`)}
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </Link>
             );
