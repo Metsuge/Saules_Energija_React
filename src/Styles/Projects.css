@@ -1,7 +1,6 @@
 .img-section-projects{
-    flex-wrap:wrap;
-  width:100%;
-  
+  flex-wrap:wrap;
+  width:80%;
   height: auto;
   text-align: center;
   display: flex;

@@ -9,6 +9,7 @@ import "../Styles/AnObject.css";
 import "../Styles/Footer.css";
 import "../Styles/Partners.css";
 import "../Styles/Projects.css";
+import "../Styles/pagination.css";
 
 
 //COMPONENTS
@@ -22,7 +23,8 @@ import Projects from "./Projects";
 import AnObject from "./AnObject";
 
 const onLoad = () =>{
-  window.scroll(0,0)
+  window.scroll(0,0);
+  // document.getElementById('nav').classList.remove("open");
 }
 
 function importAll(r) {
@@ -52,7 +54,7 @@ const getTheRightPic = (idOfPics, importedPic) => {
 const getTheListOfRightPics = (idOfPics, importedPic) => {
   let listOfPics = [];
   importedPic.forEach((pic) => {
-    let search = pic.search(`/${idOfPics}-`);
+    let search = pic.search(`/${idOfPics}-[2-9]`);
     if (search > 0 ) listOfPics.push(pic);
   });
   
@@ -125,7 +127,11 @@ class App extends Component {
                   onLoad={onLoad}
                 />
               )} />
-            <Route path="/partners" exact component={Partneriai} />
+            <Route path="/partners" exact component={() => (
+                <Partneriai
+                  onLoad={onLoad}
+                />
+              )} />
             <Route
               path="/projects"
               exact
@@ -144,6 +150,7 @@ class App extends Component {
               exact
               component={() => (
                 <DarbaiLT
+                  onLoad={onLoad}
                   onObjectClick={this.onObjectClick}
                   listOfObjectsLT={listOfObjectsLT}
                   t={t}

@@ -80,3 +80,9 @@
     position: relative;
   }
   
+
+  @media only screen and (max-width:500) {
+    .main-img-partners-each img{
+      width:120px;
+    }
+  }

@@ -31,21 +31,7 @@ const About = ({ t, onLoad }) => {
         </p> */}
 
           <p className="about-text">
-            Turime daugiau nei 30 m. patirtį, saulės, vėjo ir kombinuotų saulės – vėjo
-            mikroelektrinių projektavime bei įrengime. Ilgametė patirtis,
-            aukštos kvalifikacijos personalas ir tik laiko patikrinta,
-            geriausios kokybės naudojama įranga leidžia įgyvendinti
-            optimaliausius energetinius sprendimus. Mūsų bendrovė vienintelė
-            Lietuvoje galinti pasigirti tokia gausa sėkmingai įdiegtų ir
-            veikiančių projektų. Pagrindinės teikiamos paslaugos yra mažųjų
-            atsinaujinančiosios energijos elektrinių įrengimas įvairiems
-            vartotojams: mokykloms, kolegijoms, universitetams, ūkininkams,
-            sodybų ir sodų namelių savininkams ir kitiems privatiems,
-            visuomeniniams bei valstybiniams elektros energijos vartotojams.
-            Įrengiame autonomines jėgaines objektuose, kur nėra energetikos
-            sistemos elektros energijos paskirstymo tinklo, sujungtas su
-            skirstomaisiais tinklais saulės ir vėjo mikroelektrines,
-            kompleksines elektros ir šilumos tiekimo energetines sistemas.
+          {t("about.text")}
           </p>
         </div>
       </div>

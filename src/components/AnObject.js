@@ -8,23 +8,28 @@ function AnObject({ listOfObjectsLT, number, t, onLoad }) {
   return (
     <>
       <div onLoad={onLoad()}>
-        <p className="h2">
-          {t(`listOfObjectsLT.id${listOfObjectsLT[number].id}.title`)}
-        </p>
-        <div className="object-div">
-          
-          <div className="img-object-div">
-            <img alt="img" className="object-img" src={s} width="40%" />
-            {listOfAdditionalPics.map((pic) => {
-              return (
-                <img alt="img" className="object-img" src={pic} width="40%" />
-              );
-            })}
+        <div className="pagrindinis-div">
+          <p className="intro-about">
+            {t(`listOfObjectsLT.id${listOfObjectsLT[number].id}.title`)}
+          </p>
+          <div className="object-div">
+            
+            <div className="img-object-div">
+              <img alt="img" className="object-img" src={s} width="40%" />
+              </div>
+              {listOfAdditionalPics.map((pic) => {
+                return (
+                  <div className="img-object-div">
+                    <img alt="img" className="object-img" src={pic} width="40%" />
+                  </div>
+                );
+              })}
+            
+    
+            {/* <p className="object-text">
+              {t(`listOfObjectsLT.id${listOfObjectsLT[number].id}.text`)}
+            </p> */}
           </div>
-  
-          {/* <p className="object-text">
-            {t(`listOfObjectsLT.id${listOfObjectsLT[number].id}.text`)}
-          </p> */}
         </div>
       </div>
     </>

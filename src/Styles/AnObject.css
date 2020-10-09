@@ -1,14 +1,19 @@
 .object-div {
-  margin: auto;
-  width: 90%;
+  flex-wrap:wrap;
+  width:80%;
+  height: auto;
+  text-align: center;
   display: flex;
+  position: relative;
+  margin: 40px 20px 0 20px;
 }
 
 .object-img {
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
   margin: 10px;
-  width: 50%;
-  height: auto;
-  border: 1px solid darkgrey;
+  position: relative;
 }
 
 .object-text {
@@ -17,10 +22,10 @@
   margin: 20px;
 }
 
-.img-object-div {
+/* .img-object-div {
   flex-direction: row;
   width: inherit;
-}
+} */
 
 .main-section-Projects {
   position: relative;
@@ -28,10 +33,11 @@
 
 .each-img {
   overflow: hidden;
-  width: 300px;
-  height: 200px;
+  width: 250px;
+  height: 180px;
   margin: 10px;
   position: relative;
+  border: 1px black solid;
   /* flex-basis: 33%;
   display:flex;
   flex-direction: row; */
@@ -40,7 +46,6 @@
 .darbai-img {
   width: 100%;
   height: 100%;
-  
 }
 
 .text-section {
@@ -60,7 +65,6 @@
   justify-content: center; */
   flex-wrap:wrap;
   width:70%;
-  
   height: auto;
   text-align: center;
   display: flex;
@@ -69,19 +73,25 @@
 }
 
 .pagrindinis-div{
-  width: 100vw;
   text-align: -moz-center;
+  margin:auto;
+  width:90%;
 }
 
 .DarbaiLT-about-section {
-  width: 70%;
+  width: 100%;
   margin: auto;
   padding: 30px 30px 5px 30px;
   position: absolute;
-  top: 0px;
-  left:11%;
-  color: black;
-  background: rgba(255, 255, 255, 0.55)
+  bottom: 35px;
+  color: white; 
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+}
+
+.bolder{
+  font-family: 'Archivo Black', sans-serif ;
+  font-weight: 600 ;
+  font-size: 3vw;
 }
 
 .intro-about {
@@ -91,16 +101,18 @@
   margin: auto;
   letter-spacing: 1px;
   padding-bottom: 10px;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
+  
 }
 
 .intro-p {
-  font-size: 3vw;
+  font-size: 2.2vw;
   padding: 10px;
-  width: 50%;
+  width: 100%;
   margin: auto;
   text-align: center;
   letter-spacing: 1px;
+  line-height: 1.5;
 }
 
 .cover {
@@ -120,8 +132,6 @@
 
 .namas{
   margin-left:30px;
-  max-width: 40%;
-  max-height: 40vh;
   margin: auto;
 }
 
@@ -130,7 +140,7 @@
   text-align: center;
   display: flex;
   position: relative;
-  margin: 20px 20px 0 20px; 
+  margin: 50px 20px 25px 20px; 
 }
 
 .partnercoverflex{
@@ -158,6 +168,8 @@
   width:540px;
 }
 
+
+
 @media only screen and (max-width: 875px) {
   .object-div {
     flex-direction: column;
@@ -182,7 +194,7 @@
     width:100%;
   }
   .intro-about{
-    font-size: 8vw;
+    font-size: 4vw;
     width:100%;
     margin-bottom:20px;
   }

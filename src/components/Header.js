@@ -1,23 +1,33 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-// import phonelogo from "../images/phone.svg";
-// import email from "../images/email.svg";
 import lt from "../images/lt_flag.png";
 import uk from "../images/uk_flag.png";
-// import Burger from './Burger';
 
 import "../Styles/menu.css";
 import menuLogo from "../images/open-menu.png";
+
+const closemenu = () => {
+  window.addEventListener('click', function(e){
+  if (!document.getElementById('nav-list').contains(e.target)){
+   document.getElementById('nav').classList.remove("open");
+  }
+}
+  )}
+
+const close = () => {
+  const wtfr = document.getElementById('nav');
+  console.log(wtfr);
+}
+
+
 
 class Header extends Component {
   //sticky header
   openMenu = () => {
     const navList = document.getElementById("nav");
-    // const menuLogo = document.getElementById("menuLogo")
 
     if (window.innerWidth > 800) {
-      // menuLogo.style.cursor = "none"
       console.log("click");
     } else if (window.innerWidth < 800) {
       navList.classList.toggle("open");
@@ -28,16 +38,10 @@ class Header extends Component {
     window.addEventListener("scroll", () => {
       const isTop = window.scrollY > 100;
       const nav = document.getElementById("nav-list");
-      // const menuLogo = document.getElementById("menuLogo")
-      // const navList = document.getElementById("nav");
       if (isTop) {
         nav.classList.add("scrolled");
-        // menuLogo.classList.add("scrolled");
-        // navList.style.top = "60px"
       } else {
         nav.classList.add("scrolled");
-        // menuLogo.classList.add("scrolled");
-        // navList.style.top = "60px"
       }
     });
   }
@@ -46,16 +50,19 @@ class Header extends Component {
     window.removeEventListener("scroll");
   }
 
+
   render() {
     const t = this.props.t;
     const changeLanguage = (code) => {
       i18n.changeLanguage(code);
     };
     const { i18n } = this.props;
-    return (
+
+
+    closemenu();
+    return (    
       <>
         <header>
-          {/* <div className="header-top-bit"></div> */}
           <ul id="nav-list">
             <div className="flags">
               <img
@@ -83,6 +90,7 @@ class Header extends Component {
             <Link
                 style={{ color: "inherit", textDecoration: "none" }}
                 to="/about"
+                onClick={close()}
               >
                 <li className="underline">{t("header.about_us")}</li>
               </Link>
