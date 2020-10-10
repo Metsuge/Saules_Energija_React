@@ -5,7 +5,7 @@
 
 .tag_button {
   padding: 10px;
-  margin:10px;
+  margin: 10px;
   font: inherit;
   color: inherit;
   background-color: transparent;
@@ -15,32 +15,31 @@
   border-radius: 9%;
 }
 
-
-.active_button{
-    background-color: rgb(228, 228, 228);
+.active_button {
+  background-color: rgb(228, 228, 228);
 }
 
-.button_apie_mus{
-  width:150px;
+.button_apie_mus {
+  width: 150px;
   height: 50px;
+
   background-color: #243f54;
   border-radius: 20px;
-  font-family: 'Mulish', sans-serif;;
+  font-family: "Mulish", sans-serif;
   text-decoration: none;
-  font-size:20px;
-  color:white;
-  font-weight: bold; 
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
   cursor: pointer;
-  border:none;
+  border: none;
 }
-
 
 .button_apie_mus:active {
   transform: scale(0.95);
 }
 
-.button_apie_mus_div{
-  width:60%;
+.button_apie_mus_div {
+  width: 60%;
   padding: 50px 10px 30px 10px;
-
+  margin: auto;
 }

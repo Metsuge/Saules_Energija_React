@@ -14,7 +14,7 @@ import { withTranslation } from "react-i18next";
 
 // const WrappedMap = withScriptjs(withGoogleMap(Map));
 
-import zemelapis from "../images/zemelapis.JPG";
+// import zemelapis from "../images/zemelapis.JPG";
 
 const Contacts = ({ t, onLoad }) => {
   return (
@@ -24,7 +24,7 @@ const Contacts = ({ t, onLoad }) => {
           {t("contacts.title")}
         </p>
         <div className="mainContainer-contacts">
-          <div className="container-contactsMap">
+          {/* <div className="container-contactsMap">
             <img
              alt=""
               className="contact-map"
@@ -32,7 +32,7 @@ const Contacts = ({ t, onLoad }) => {
               width="100%"
               height="100%"
             ></img>
-          </div>
+          </div> */}
           <div className="container-contacts">
             <ul className="contact-list">
               <li>

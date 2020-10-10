@@ -1,6 +1,6 @@
 .object-div {
-  flex-wrap:wrap;
-  width:80%;
+  flex-wrap: wrap;
+  width: 80%;
   height: auto;
   text-align: center;
   display: flex;
@@ -11,7 +11,7 @@
 .object-img {
   overflow: hidden;
   width: 300px;
-  height: 200px;
+  height: auto;
   margin: 10px;
   position: relative;
 }
@@ -63,8 +63,8 @@
   /* margin: auto; */
   /* flex-direction: row;
   justify-content: center; */
-  flex-wrap:wrap;
-  width:70%;
+  flex-wrap: wrap;
+  width: 70%;
   height: auto;
   text-align: center;
   display: flex;
@@ -72,10 +72,10 @@
   margin: 0 20px 0 20px;
 }
 
-.pagrindinis-div{
+.pagrindinis-div {
   text-align: -moz-center;
-  margin:auto;
-  width:90%;
+  margin: auto;
+  width: 90%;
 }
 
 .DarbaiLT-about-section {
@@ -84,14 +84,14 @@
   padding: 30px 30px 5px 30px;
   position: absolute;
   bottom: 35px;
-  color: white; 
+  color: white;
   /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 }
 
-.bolder{
-  font-family: 'Archivo Black', sans-serif ;
-  font-weight: 600 ;
-  font-size: 3vw;
+.bolder {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 600;
+  /* font-size: 3vw; */
 }
 
 .intro-about {
@@ -102,7 +102,6 @@
   letter-spacing: 1px;
   padding-bottom: 10px;
   /* border-bottom: 1px solid black; */
-  
 }
 
 .intro-p {
@@ -124,28 +123,28 @@
   height: 100%;
 }
 
-.coverimg{
+.coverimg {
   max-width: 100%;
   max-height: 100vh;
   margin: auto;
 }
 
-.namas{
-  margin-left:30px;
+.namas {
+  margin-left: 30px;
   margin: auto;
 }
 
-.cover2{
+.cover2 {
   height: auto;
   text-align: center;
   display: flex;
   position: relative;
-  margin: 50px 20px 25px 20px; 
+  margin: 50px 20px 25px 20px;
 }
 
-.partnercoverflex{
+.partnercoverflex {
   width: 100%;
-  height: 300px;
+  height: auto;
   display: flex;
   position: relative;
 }
@@ -162,54 +161,49 @@
   height: auto;
 }
 
-.cropped-pics{
+.cropped-pics {
   display: flex;
   flex-wrap: wrap;
-  width:540px;
+  width: 540px;
 }
-
-
 
 @media only screen and (max-width: 875px) {
   .object-div {
     flex-direction: column;
   }
 
-  .DarbaiLT-about-section{
+  .DarbaiLT-about-section {
     padding: 0px 30px 5px 30px;
+    width: unset;
+    color: black;
   }
 
-  .partnercoverflex{
+  .partnercoverflex {
     flex-direction: column;
-    height:auto;
+    height: auto;
     margin-bottom: 20px;
   }
 
-  .cover2{
+  .cover2 {
     flex-direction: column;
   }
 
-  .intro-p{
+  .intro-p {
     font-size: 5vw;
-    width:100%;
+    width: 100%;
   }
-  .intro-about{
-    font-size: 4vw;
-    width:100%;
-    margin-bottom:20px;
-  }
-
-  .cropped-pics{
-    width:100%;
+  .intro-about {
+    font-size: 5vw;
+    width: 80%;
+    margin-bottom: 20px;
   }
 
-  .img-section{
-    width: unset;
+  .cropped-pics {
+    width: 100%;
   }
-
 }
 @media only screen and (max-width: 597px) {
-  .main{
+  .main {
     visibility: hidden;
   }
 }

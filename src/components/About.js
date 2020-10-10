@@ -12,13 +12,13 @@ const About = ({ t, onLoad }) => {
   return (
     <>
       <div onLoad={onLoad()}>
-      <div className="about-section">
-      <p className="intro-about" id="apieImone" >
-          {t("about.title")}
-        </p>
-        <p className="intro-p">UAB "Sun lux"</p>
+        <div className="about-section">
+          <p className="intro-about" id="apieImone">
+            {t("about.title")}
+          </p>
+          <p className="intro-p">UAB "Sun lux"</p>
         </div>
-        
+
         {/* <button type="button" onClick={() => changeLanguage('en')}>{t('translation:en')}</button>
       <button type="button" onClick={() => changeLanguage('lt')}>{t('translation:lt')}</button> */}
 
@@ -30,9 +30,7 @@ const About = ({ t, onLoad }) => {
           įgyvendinti daugiamečius tyrimus.
         </p> */}
 
-          <p className="about-text">
-          {t("about.text")}
-          </p>
+          <p className="about-text">{t("about.text")}</p>
         </div>
       </div>
     </>

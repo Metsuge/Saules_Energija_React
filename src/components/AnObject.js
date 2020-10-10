@@ -13,19 +13,17 @@ function AnObject({ listOfObjectsLT, number, t, onLoad }) {
             {t(`listOfObjectsLT.id${listOfObjectsLT[number].id}.title`)}
           </p>
           <div className="object-div">
-            
             <div className="img-object-div">
               <img alt="img" className="object-img" src={s} width="40%" />
-              </div>
-              {listOfAdditionalPics.map((pic) => {
-                return (
-                  <div className="img-object-div">
-                    <img alt="img" className="object-img" src={pic} width="40%" />
-                  </div>
-                );
-              })}
-            
-    
+            </div>
+            {listOfAdditionalPics.map((pic) => {
+              return (
+                <div className="img-object-div">
+                  <img alt="img" className="object-img" src={pic} width="40%" />
+                </div>
+              );
+            })}
+
             {/* <p className="object-text">
               {t(`listOfObjectsLT.id${listOfObjectsLT[number].id}.text`)}
             </p> */}

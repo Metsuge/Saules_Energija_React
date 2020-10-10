@@ -29,7 +29,9 @@ const DarbaiLT = ({ onObjectClick, t, listOfObjectsLT, onLoad }) => {
             src={background}
           ></img>
           <div className="DarbaiLT-about-section">
-            <p className="intro-about "><span className="bolder">SAULĖS ELEKTRINĖS IR VĖJO JĖGAINĖS</span></p>
+            <p className="intro-about ">
+              <span className="bolder">SAULĖS ELEKTRINĖS IR VĖJO JĖGAINĖS</span>
+            </p>
           </div>
         </div>
         <div className="cover2">

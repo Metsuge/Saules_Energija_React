@@ -1,13 +1,11 @@
 import React from "react";
 
+import prosolar from "../images/logo/prosolar-logo-new.png";
+import fronius from "../images/logo/fronius.webp";
+import aleo from "../images/logo/aleo_logo.png";
+import renusol from "../images/logo/Renusol.webp";
 
-import prosolar from '../images/logo/prosolar-logo-new.png';
-import fronius from '../images/logo/fronius.webp';
-import aleo from '../images/logo/aleo_logo.png';
-import renusol from '../images/logo/Renusol.webp';
-
-
-const Partneriai = ({onLoad}) => {
+const Partneriai = ({ onLoad }) => {
   return (
     <>
       <div onLoad={onLoad()}>
@@ -40,6 +38,5 @@ const Partneriai = ({onLoad}) => {
     </>
   );
 };
-
 
 export default Partneriai;

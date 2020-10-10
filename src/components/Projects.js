@@ -11,26 +11,28 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
   let [objectTag, setTag] = useState("all");
   let [projectList, setprojectList] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(12);
+  const [postsPerPage] = useState(12);
   let input = null;
 
-  useEffect(() => {
-    setprojectList(listOfObjectsLT);
-  }, []);
-
-  //setting the state
   const changeState = () => setTag((objectTag = input));
 
   if (objectTag === "all") {
     selectedList = projectList;
   }
 
+  useEffect(() => {
+    setprojectList(listOfObjectsLT);
+  }, [objectTag]);
   //uzdeda pilka kai paspaudi, galima pasirinkti kelis tagus
   // const addClass = () =>{
   //   //the one that's clicked now
   //   let clickedBtn = document.getElementById(objectTag);
   //   clickedBtn.classList.toggle('active_button')
   // }
+
+  setTimeout(() => {
+    blurrOnImg();
+  }, 2000);
 
   const objectTagList = [""];
 
@@ -58,16 +60,19 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
 
   const indexLastPost = currentPage * postsPerPage;
   const indexFirstPost = indexLastPost - postsPerPage;
-  const currentPosts = listOfObjectsLT.slice(indexFirstPost, indexLastPost);
+  const currentPosts = selectedList.slice(indexFirstPost, indexLastPost);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  
+  const blurrOnImg = () => {
+    const imgDOMList = document.getElementsByClassName("projectImg");
+    console.log(imgDOMList);
+  };
+
   return (
     <>
       <div onLoad={onLoad()}>
         <p className="h2">{t("DarbaiLT.title")}</p>
-
         <div>
           <ul className="buttonList">
             <li>
@@ -118,10 +123,16 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
               return (
                 <Link to={`/object/${oneObject.id}`}>
                   <div
+                    id="projectImg"
                     onClick={() => onObjectClick(oneObject.id)}
                     className="each-img"
                   >
-                    <img alt="" className="darbai-img" src={oneObject.src} />
+                    <img
+                      alt=""
+                      id="darbai-img"
+                      className="darbai-img"
+                      src={oneObject.src}
+                    />
 
                     {/* <div className="text-section">
                       <p className="textonimg">
@@ -136,7 +147,7 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
           <div>
             <Pagination
               postsPerPage={postsPerPage}
-              totalPosts={listOfObjectsLT.length}
+              totalPosts={selectedList.length}
               paginate={paginate}
             />
           </div>

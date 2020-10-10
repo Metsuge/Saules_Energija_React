@@ -43,49 +43,49 @@ footer {
   margin-top: 10px;
 }
 
-.rights{
-  margin:auto;
-  width:80%;
+.rights {
+  margin: auto;
+  width: 80%;
   text-align: center;
-  padding:15px;
+  padding: 15px;
   border-top: 1px solid white;
 }
 
-.footer-rekvizitai{
+.footer-rekvizitai {
   font-size: 2.5vh;
-  letter-spacing:1px;
+  letter-spacing: 1px;
 }
 
-.footer-rekvizitai li{
-  padding:10px;
+.footer-rekvizitai li {
+  padding: 10px;
 }
 
-.column li{
+.column li {
   margin: 0 30px 40px 0;
 }
 
-.column{
-  width:100%;
+.column {
+  width: 100%;
 }
 
-.menu-columns{
+.menu-columns {
   display: flex;
   padding-top: 50px;
-  width:50%;
+  width: 50%;
 }
 
 @media only screen and (max-width: 900px) {
-  #nav-footer{
+  #nav-footer {
     flex-direction: column !important;
     text-align: center;
-    width:inherit;
+    width: inherit;
   }
 
-  .main-footer{
-    width:100%;
+  .main-footer {
+    width: 100%;
   }
 
-  .menu-columns{
+  .menu-columns {
     display: unset;
     margin: auto;
   }

@@ -2,15 +2,12 @@ import React, { Component } from "react";
 import "../Styles/style.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from 'react-slick';
-import '../slick-1.8.1/slick/slick.css'
+import Slider from "react-slick";
+import "../slick-1.8.1/slick/slick.css";
 
-
-
-import Photo1 from '../images/slides/rsz_8-1.jpg';
-import Photo2 from '../images/slides/rsz_6-2.jpg';
-import Photo3 from '../images/slides/rsz_231-960x350.jpg';
-
+import Photo1 from "../images/slides/rsz_8-1.jpg";
+import Photo2 from "../images/slides/rsz_6-2.jpg";
+import Photo3 from "../images/slides/rsz_231-960x350.jpg";
 
 const photos = [
   {
@@ -49,7 +46,6 @@ class Slides extends Component {
     };
 
     return (
-      
       <div className="main-img">
         {/* <Slider {...settings}>
           {photos.map(photo => {

@@ -11,19 +11,21 @@ const Footer = ({ t }) => {
         <nav id="nav-footer">
           <div className="main-footer">
             {/* <ul className="footer-list"> */}
-              {/* <li>
+            {/* <li>
                 <img alt="phoneLogo" src={phonelogo} />
               </li> */}
-              {/* <li style={{ width: "100px" }}>+370 688 54876</li> */}
+            {/* <li style={{ width: "100px" }}>+370 688 54876</li> */}
 
-              {/* <li>
+            {/* <li>
                 <img alt="email" src={email} />
               </li> */}
-              {/* <li>edmundaszilinskas@gmail.com</li> */}
-              
+            {/* <li>edmundaszilinskas@gmail.com</li> */}
+
             {/* </ul> */}
             <div className="footer-rekvizitai">
-              <li><p style={{fontWeight: "bold"}}>UAB "Sun Lux"</p></li>
+              <li>
+                <p style={{ fontWeight: "bold" }}>UAB "Sun Lux"</p>
+              </li>
               <li>+370 688 54876</li>
               <li>edmundaszilinskas@gmail.com</li>
               <li>Ringaudų sen., Virbališkių km., Saulės g. 1, Kaunas</li>
@@ -31,10 +33,12 @@ const Footer = ({ t }) => {
               <li>{t("contacts.comp_code")} 302821529</li>
             </div>
           </div>
-          <div  className="menu-columns">
+          <div className="menu-columns">
             <div className="column">
               <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
-                <li className="underline underline-footer">{t("header.home")}</li>
+                <li className="underline underline-footer">
+                  {t("header.home")}
+                </li>
               </Link>
               <Link
                 style={{ color: "inherit", textDecoration: "none" }}
@@ -45,7 +49,7 @@ const Footer = ({ t }) => {
                 </li>
               </Link>
             </div>
-  
+
             <div className="column">
               <Link
                 style={{ color: "inherit", textDecoration: "none" }}

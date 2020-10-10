@@ -8,19 +8,20 @@ import "../Styles/menu.css";
 import menuLogo from "../images/open-menu.png";
 
 const closemenu = () => {
-  window.addEventListener('click', function(e){
-  if (!document.getElementById('nav-list').contains(e.target)){
-   document.getElementById('nav').classList.remove("open");
-  }
-}
-  )}
+  window.addEventListener("click", function (e) {
+    if (!document.getElementById("nav-list").contains(e.target)) {
+      document.getElementById("nav").classList.remove("open");
+    }
+  });
+};
 
-const close = () => {
-  const wtfr = document.getElementById('nav');
-  console.log(wtfr);
-}
+const closeagain = () => {
+  document.getElementById("nav").classList.remove("open");
+};
 
-
+// const close = () => {
+//   const wtfr = document.getElementById('nav');
+// }
 
 class Header extends Component {
   //sticky header
@@ -50,7 +51,6 @@ class Header extends Component {
     window.removeEventListener("scroll");
   }
 
-
   render() {
     const t = this.props.t;
     const changeLanguage = (code) => {
@@ -58,9 +58,8 @@ class Header extends Component {
     };
     const { i18n } = this.props;
 
-
     closemenu();
-    return (    
+    return (
       <>
         <header>
           <ul id="nav-list">
@@ -87,36 +86,42 @@ class Header extends Component {
               ></img>
             </div>
             <nav className="nav" id="nav">
-            <Link
+              <Link
                 style={{ color: "inherit", textDecoration: "none" }}
                 to="/about"
-                onClick={close()}
+                onClick={() => closeagain()}
               >
                 <li className="underline">{t("header.about_us")}</li>
               </Link>
               <Link
                 style={{ color: "inherit", textDecoration: "none" }}
                 to="/contacts"
+                onClick={() => closeagain()}
               >
                 <li className="underline">{t("header.contacts")}</li>
               </Link>
-              <Link style={{ color: "inherit", textDecoration: "none" }} to="/">
+              <Link
+                style={{ color: "inherit", textDecoration: "none" }}
+                to="/"
+                onClick={() => closeagain()}
+              >
                 <li className="underline">{t("header.home")}</li>
               </Link>
               <Link
                 style={{ color: "inherit", textDecoration: "none" }}
                 to="/projects"
+                onClick={() => closeagain()}
               >
                 <li className="underline">{t("header.projects")}</li>
               </Link>
-              
+
               <Link
                 to="/partners"
                 style={{ color: "inherit", textDecoration: "none" }}
+                onClick={() => closeagain()}
               >
                 <li className="underline">{t("header.partners")}</li>
               </Link>
-              
             </nav>
           </ul>
         </header>
