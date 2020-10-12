@@ -40,7 +40,7 @@ const DarbaiLT = ({ onObjectClick, t, listOfObjectsLT, onLoad }) => {
           </div>
           <div className="button_apie_mus_div">
             <p className="intro-p">
-              Daugiau nei 30 metų patirtis, aukštos kvalifikacijos personalas ir
+              30 metų patirtis, aukštos kvalifikacijos personalas ir
               tik laiko patikrinta, geriausios kokybės naudojama įranga
             </p>
             <Link
@@ -101,7 +101,7 @@ const DarbaiLT = ({ onObjectClick, t, listOfObjectsLT, onLoad }) => {
               );
             })}
             <div className="visiprojektai">
-              <Link to="/projects">
+              <Link to="/projects" style={{textDecoration: "none"}}>
                 <p>{t("DarbaiLT.linkToProj")}</p>
               </Link>
             </div>

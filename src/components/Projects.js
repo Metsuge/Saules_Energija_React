@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
+import SuspenseImg from "./SuspenseImg";
 import { Link } from "react-router-dom";
 import { withTranslation } from "react-i18next";
 
@@ -30,9 +31,9 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
   //   clickedBtn.classList.toggle('active_button')
   // }
 
-  setTimeout(() => {
-    blurrOnImg();
-  }, 2000);
+  // setTimeout(() => {
+  //   blurrOnImg();
+  // }, 2000);
 
   const objectTagList = [""];
 
@@ -64,10 +65,9 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
-  const blurrOnImg = () => {
-    const imgDOMList = document.getElementsByClassName("projectImg");
-    console.log(imgDOMList);
-  };
+  // const blurrOnImg = () => {
+  //   const imgDOMList = document.getElementsByClassName("projectImg");
+  // };
 
   return (
     <>
@@ -75,7 +75,7 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
         <p className="h2">{t("DarbaiLT.title")}</p>
         <div>
           <ul className="buttonList">
-            <li>
+            <li key="all">
               <button
                 className="tag_button"
                 id="all"
@@ -88,7 +88,7 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
                 {t("Projects.all")}
               </button>
             </li>
-            <li>
+            <li key="2019">
               <button
                 className="tag_button"
                 id="2019"
@@ -101,7 +101,7 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
                 2019
               </button>
             </li>
-            <li>
+            <li key="2020">
               <button
                 className="tag_button 2020"
                 id="2020"
@@ -119,30 +119,27 @@ const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
 
         <div className="pagrindinis-div">
           <div className="img-section-projects">
-            {currentPosts.map((oneObject) => {
-              return (
-                <Link to={`/object/${oneObject.id}`}>
-                  <div
-                    id="projectImg"
-                    onClick={() => onObjectClick(oneObject.id)}
-                    className="each-img"
-                  >
-                    <img
-                      alt=""
-                      id="darbai-img"
-                      className="darbai-img"
-                      src={oneObject.src}
-                    />
+            <Suspense fallback={"Loading..."}>
+              {currentPosts.map((oneObject) => {
+                return (
+                  <Link to={`/object/${oneObject.id}`}>
+                    <div
+                      id="projectImg"
+                      onClick={() => onObjectClick(oneObject.id)}
+                      className="each-img"
+                    >
+                      <SuspenseImg src={oneObject.src} />
 
-                    {/* <div className="text-section">
-                      <p className="textonimg">
-                        {t(`listOfObjectsLT.id${oneObject.id}.introtext`)}
-                      </p>
-                    </div> */}
-                  </div>
-                </Link>
-              );
-            })}
+                      {/* <div className="text-section">
+                	      <p className="textonimg">
+                	        {t(`listOfObjectsLT.id${oneObject.id}.introtext`)}
+                	      </p>
+                	    </div> */}
+                    </div>
+                  </Link>
+                );
+              })}
+            </Suspense>
           </div>
           <div>
             <Pagination

@@ -35,19 +35,19 @@ const Contacts = ({ t, onLoad }) => {
           </div> */}
           <div className="container-contacts">
             <ul className="contact-list">
-              <li>
+              <li key={t("contacts.phone")}>
                 <h3 id="phone">{t("contacts.phone")}</h3>
                 <p>+370 688 54876</p>
               </li>
-              <li>
+              <li key={t("contacts.email")}>
                 <h3 id="emaill">{t("contacts.email")}</h3>
                 <p>edmundaszilinskas@gmail.com</p>
               </li>
-              <li>
+              <li key={t("contacts.adress")}>
                 <h3 id="adress">{t("contacts.adress")}</h3>
                 <p>Ringaudų sen., Virbališkių km., Saulės g. 1, Kaunas</p>
               </li>
-              <li>
+              <li key={t("contacts.details")}>
                 <h3 id="companyInfo">{t("contacts.details")}</h3>
                 <p id="companyCode">
                   {t("contacts.comp_code")} 302821529, UAB "Sun Lux"

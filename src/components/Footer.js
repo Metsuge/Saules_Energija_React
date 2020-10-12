@@ -10,27 +10,15 @@ const Footer = ({ t }) => {
       <footer className="footer-main">
         <nav id="nav-footer">
           <div className="main-footer">
-            {/* <ul className="footer-list"> */}
-            {/* <li>
-                <img alt="phoneLogo" src={phonelogo} />
-              </li> */}
-            {/* <li style={{ width: "100px" }}>+370 688 54876</li> */}
-
-            {/* <li>
-                <img alt="email" src={email} />
-              </li> */}
-            {/* <li>edmundaszilinskas@gmail.com</li> */}
-
-            {/* </ul> */}
             <div className="footer-rekvizitai">
-              <li>
+              <li key="compName">
                 <p style={{ fontWeight: "bold" }}>UAB "Sun Lux"</p>
               </li>
-              <li>+370 688 54876</li>
-              <li>edmundaszilinskas@gmail.com</li>
-              <li>Ringaudų sen., Virbališkių km., Saulės g. 1, Kaunas</li>
-              <li>{t("contacts.VAT")} LT100007002916</li>
-              <li>{t("contacts.comp_code")} 302821529</li>
+              <li key="phone">+370 688 54876</li>
+              <li key="email">edmundaszilinskas@gmail.com</li>
+              <li key="adress">Ringaudų sen., Virbališkių km., Saulės g. 1, Kaunas</li>
+              <li key="VAT">{t("contacts.VAT")} LT100007002916</li>
+              <li key="compCOde">{t("contacts.comp_code")} 302821529</li>
             </div>
           </div>
           <div className="menu-columns">

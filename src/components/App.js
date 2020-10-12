@@ -39,6 +39,10 @@ const images19 = importAll(
   require.context("../images/2019/", false, /\.(png|jpe?g|svg|JPG)$/)
 );
 
+const images1318 = importAll(
+  require.context("../images/2013-2018/", false, /\.(png|jpe?g|svg|JPG)$/)
+);
+
 //main photo of the project
 const getTheRightPic = (idOfPics, importedPic) => {
   let picture = "";
@@ -85,6 +89,7 @@ const makeDataObject = (nrOfProjects, importedPic, year) => {
 
 makeDataObject(12, images20, 20);
 makeDataObject(17, images19, 19);
+makeDataObject(20, images1318, 1318);
 
 let clickeddiv = 1;
 class App extends Component {

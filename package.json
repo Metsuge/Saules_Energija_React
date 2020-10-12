@@ -1,4 +1,4 @@
-{
+{ 
   "name": "sauleswebsite",
   "version": "0.1.0",
   "private": true,
@@ -19,13 +19,15 @@
     "react-scripts": "^3.4.1",
     "react-slick": "^0.26.1",
     "require-context": "^1.1.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "watch": "^1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+
   },
   "eslintConfig": {
     "extends": "react-app"
