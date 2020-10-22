@@ -43,6 +43,13 @@ const images1318 = importAll(
   require.context("../images/2013-2018/", false, /\.(png|jpe?g|svg|JPG)$/)
 );
 
+const images1013 = importAll(
+  require.context("../images/2010-2013/", false, /\.(png|jpe?g|svg|JPG)$/)
+);
+
+const images0010 = importAll(
+  require.context("../images/2000-2010/", false, /\.(png|jpe?g|svg|JPG)$/)
+);
 //main photo of the project
 const getTheRightPic = (idOfPics, importedPic) => {
   let picture = "";
@@ -74,22 +81,26 @@ const generateId = () => {
 //nrOfProjects - how many projects in the images folder
 //importedPic - variable with imported pics
 //year - year of the projects, used to create tags on each pic
-const makeDataObject = (nrOfProjects, importedPic, year) => {
+const makeDataObject = (nrOfProjects, importedPic, tag) => {
   for (let i = 1; i < nrOfProjects + 1; i++) {
     listOfObjectsLT.push({
       src: getTheRightPic(i, importedPic),
       // id: `${i-1}`,
       id: generateId(),
       pics: getTheListOfRightPics(i, importedPic),
-      tag: "20" + year,
+      tag: tag,
     });
   }
   return listOfObjectsLT;
 };
 
-makeDataObject(12, images20, 20);
-makeDataObject(17, images19, 19);
-makeDataObject(20, images1318, 1318);
+makeDataObject(12, images20, "2020");
+makeDataObject(17, images19, "2019");
+makeDataObject(20, images1318, "2013-2018");
+makeDataObject(21, images1013, "2010-2013");
+makeDataObject(34, images0010, "2000-2010");
+
+
 
 let clickeddiv = 1;
 class App extends Component {

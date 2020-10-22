@@ -57,22 +57,22 @@ const DarbaiLT = ({ onObjectClick, t, listOfObjectsLT, onLoad }) => {
           <p className="intro-about">Partneriai</p>
           <div className="partnercoverflex">
             <div className="main-img-partners-each">
-              <a href="http://prosolar.cz">
+              <a target="_blank" href="http://prosolar.cz">
                 <img alt="prosolar" src={prosolar} />
               </a>
             </div>
             <div className="main-img-partners-each">
-              <a href="https://www.fronius.com/en">
+              <a target="_blank" href="https://www.fronius.com/en">
                 <img alt="fronius" src={fronius} />
               </a>
             </div>
             <div className="main-img-partners-each">
-              <a href="https://www.renusol.com/en/">
+              <a target="_blank" href="https://www.renusol.com/en/">
                 <img alt="renusol" src={renusol} />
               </a>
             </div>
             <div className="main-img-partners-each">
-              <a href="https://www.aleo-solar.com/">
+              <a target="_blank" href="https://www.aleo-solar.com/">
                 <img alt="aleo" src={aleo} />
               </a>
             </div>
@@ -84,7 +84,7 @@ const DarbaiLT = ({ onObjectClick, t, listOfObjectsLT, onLoad }) => {
           <div className="img-section">
             {listforDarbaiLT.map((oneObject) => {
               return (
-                <Link to={`/object/${oneObject.id}`}>
+                <Link target={"_blank"} to={`/object/${oneObject.id}`}>
                   <div
                     onClick={() => onObjectClick(oneObject.id)}
                     className="each-img"

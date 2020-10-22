@@ -1,8 +1,4 @@
-
 import React from "react";
-
-
-
 
 const imgCache = {
     __cache: {},
@@ -26,7 +22,7 @@ const imgCache = {
     }
   };
 
-const SuspenseImg = ({ src, ...rest }) => {
+const SuspenseImg = ({ src }) => {
     imgCache.read(src);
     return ( 
         <img 

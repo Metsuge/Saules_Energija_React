@@ -14,22 +14,22 @@ const Partneriai = ({ onLoad }) => {
         </p>
         <div className="main-img-partners">
           <div className="main-img-partners-each">
-            <a href="http://prosolar.cz">
+            <a target="_blank" href="http://prosolar.cz">
               <img alt="pic" src={prosolar} />
             </a>
           </div>
           <div className="main-img-partners-each">
-            <a href="https://www.fronius.com/en">
+            <a target="_blank" href="https://www.fronius.com/en">
               <img alt="pic" src={fronius} />
             </a>
           </div>
           <div className="main-img-partners-each">
-            <a href="https://www.renusol.com/en/">
+            <a target="_blank" href="https://www.renusol.com/en/">
               <img alt="pic" src={renusol} />
             </a>
           </div>
           <div className="main-img-partners-each">
-            <a href="https://www.aleo-solar.com/">
+            <a target="_blank" href="https://www.aleo-solar.com/">
               <img alt="pic" src={aleo} />
             </a>
           </div>
