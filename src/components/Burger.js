@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Styles/menu.css";
 import menuLogo from "../images/open-menu.png";
 

@@ -1,121 +1,128 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, Suspense } from "react";
+import SuspenseImg from "./SuspenseImg";
 import { Link } from "react-router-dom";
 import { withTranslation } from "react-i18next";
 
+import Pagination from "./Pagination";
 
 import "../Styles/buttons.css";
 let selectedList = [];
 
-const Projects = ({ onObjectClick, listOfObjectsLT, t }) => {
+const Projects = ({ onObjectClick, listOfObjectsLT, t, onLoad }) => {
   let [objectTag, setTag] = useState("all");
+  let [projectList, setprojectList] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage] = useState(12); //12 projects per page
   let input = null;
-  
-  //setting the state
-  const changeState = () => setTag((objectTag = input));
 
-  if(objectTag === 'all'){
-    selectedList = listOfObjectsLT
+  const changeState = () => setTag((objectTag = input));
+  //dropdown selection when page is loaded:
+  if (objectTag === "all") {
+    selectedList = projectList;
   }
 
+  useEffect(() => {
+    setprojectList(listOfObjectsLT);
+  }, [objectTag]);
+ 
 
-  //uzdeda pilka kai paspaudi, galima pasirinkti kelis tagus
-  // const addClass = () =>{
-  //   //the one that's clicked now
-  //   let clickedBtn = document.getElementById(objectTag);
-  //   clickedBtn.classList.toggle('active_button')
-  // }
-
-  const objectTagList = [''];
+  const objectTagList = [""];
 
   const getTagList = () => {
-    objectTagList.push(objectTag)
-    
-  }
+    objectTagList.push(objectTag);
+  };
 
-  // const ObjectsToRender = () => {
-  //   selectedList = [];    //list of objects to be rendered
-  //   //addClass()
-  //   for (let i = 0; i < 16; i++) {     
-  //     if (listOfObjectsLT[i].tag === objectTag){
-  //       selectedList.push(listOfObjectsLT[i]);
-  //     }
-  //   }   
-  // };
-
+  const ObjectsToRender = () => {
+    selectedList = []; //list of objects to be rendered
+    if (objectTag === "all") {
+      selectedList = projectList;
+    }
+    for (let i = 0; i < projectList.length; i++) {
+      if (projectList[i].tag === objectTag) {
+        selectedList.push(projectList[i]);
+      }
+    }
+  };
 
   //onclick paleidziamos funkcijos
-  const getInput = (fromOnClick) => {
-    input = fromOnClick;
+  const getInput = (dropdownValue) => {
+    input = dropdownValue;
     changeState();
-    // ObjectsToRender();
+    ObjectsToRender();
     getTagList();
   };
-  
+
+  const indexLastPost = currentPage * postsPerPage;
+  const indexFirstPost = indexLastPost - postsPerPage;
+  const currentPosts = selectedList.slice(indexFirstPost, indexLastPost);
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     <>
-      <p className="h2">{t("DarbaiLT.title")}</p>
-
-      <div>
-        <ul className="buttonList">
-          <li>
-            <button
-              className="tag_button" 
-              id="all"
-              type="button"
-              name="all"
-              onClick={(e) => {
-                getInput(e.target.name);
-              }}
-            >
-              {t("Projects.all")}
-            </button>
-          </li>
-          <li>
-            {/* <button
-              className="tag_button"
-              id="2001"
-              type="button"
-              name="2001"
-              onClick={(e) => {
-                getInput(e.target.name);
-              }}
-            >
-              2001
-            </button> */}
-          </li>
-          <li>
-            {/* <button
-              className="tag_button 2020"
-              id="2020"
-              type="button"
-              name="2020"
-              onClick={(e) => {
-                getInput(e.target.name);
-              }}
-            >
-              2020
-            </button> */}
-          </li>
-        </ul>
-      </div>
-
-      <div className="img-section">
-        {selectedList.map((oneObject) => {
-          return (
-            <Link to={`/object/${oneObject.id}`}>
-              <div
-                onClick={() => onObjectClick(oneObject.id)}
-                className="each-img img1"
+      <div onLoad={onLoad()}>
+        <p className="h2">{t("DarbaiLT.title")}</p>
+        <div>
+          <div>
+            <div className="custom-select">
+              <select
+                className="select"
+                onChange={(e) => getInput(e.target.value)}
               >
-                <img alt="" className="darbai-img" src={oneObject.src} />
-                <div className="text-container-glass"></div>
-                <p className="textonimg">
-                  {t(`listOfObjectsLT.id${oneObject.id}.introtext`)}
-                </p>
-              </div>
-            </Link>
-          );
-        })}
+                <option className="select-option" value="all" name="all">
+                  All
+                </option>
+                <option value="2020" name="2020">
+                  2020
+                </option>
+                <option value="2019" name="2019">
+                  2019
+                </option>
+                <option value="2013-2018">2013-2018</option>
+                <option value="2010-2013">2010-2013</option>
+                <option value="2000-2010">2000-2010</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div className="pagrindinis-div">
+          <div className="img-section-projects">
+            <Suspense fallback={"Loading..."}>
+              {currentPosts.map((oneObject) => {
+                return (
+               
+                  <Link key={oneObject.id} to={`/object/${oneObject.id}`}>
+                    
+                      <div
+                        id="projectImg"
+                        onClick={() => onObjectClick(oneObject.id)}
+                        className="each-img"
+                      >
+                    
+                      <SuspenseImg src={oneObject.src} />
+
+                      {/* <div className="text-section">
+                	      <p className="textonimg">
+                	        {t(`listOfObjectsLT.id${oneObject.id}.introtext`)}
+                	      </p>
+                	    </div> */}
+                    </div>
+                    
+                  </Link>
+                  
+                );
+              })}
+            </Suspense>
+          </div>
+          <div>
+            <Pagination
+              postsPerPage={postsPerPage}
+              totalPosts={selectedList.length}
+              paginate={paginate}
+            />
+          </div>
+        </div>
       </div>
     </>
   );

@@ -2,14 +2,8 @@
   z-index: 101;
   position: sticky;
   margin: 0px 15px 15px 30px;
-  
   margin-top: 20px;
 }
-
-
-/* #menuLogo {
-  
-} */
 
 .open {
   display: flex !important;

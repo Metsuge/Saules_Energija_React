@@ -1,0 +1,41 @@
+ {/* <ul className="buttonList">
+            <li key="all">
+              <button
+                className="tag_button"
+                id="all"
+                type="button"
+                name="all"
+                onClick={(e) => {
+                  getInput(e.target.name);
+                }}
+              >
+                {t("Projects.all")}
+              </button>
+            </li>
+            <li key="2019">
+              <button
+                className="tag_button"
+                id="2019"
+                type="button"
+                name="2019"
+                onClick={(e) => {
+                  getInput(e.target.name);
+                }}
+              >
+                2019
+              </button>
+            </li>
+            <li key="2020">
+              <button
+                className="tag_button 2020"
+                id="2020"
+                type="button"
+                name="2020"
+                onClick={(e) => {
+                  getInput(e.target.name);
+                }}
+              >
+                2020
+              </button>
+            </li>
+          </ul>

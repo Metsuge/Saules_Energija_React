@@ -5,45 +5,30 @@
 
   border-radius: 9px;
   word-spacing: 10px;
-  color:black;
+  color:white;
 }
 
 .container-about {
   margin: auto;
   padding: 100px;
-  border: 1px solid grey;
-  width: 60%;
+  width: 100%;
   box-sizing: border-box;
 }
 
-.contact-list {
-  display: inline-block;
-  list-style-type: none;
-  margin-left: 50px;
-  width: 90vh;
-  height: 55vh;
-  line-height: 50px;
-  font-size: 19px;
-}
-.contact-list p {
-  font-family: "Open Sans", sans-serif !important;
-}
+
+
 
 .about-text {
-  font-size: 18px;
-  line-height: 40px;
+  font-size: 22px;
+  line-height: 50px;
   margin-bottom: 30px;
 }
 
-.map {
-  width: 500px;
-  height: 500px;
-  float: right;
-  top: 20px;
-  right: 20px;
-  position: absolute;
-}
-
-.container-contacts {
-  position: relative;
+.about-section{
+  width: 70%;
+  margin: auto;
+  padding: 30px 30px 5px 30px;  
+  left:11%;
+  color: black;
+  background: rgba(255, 255, 255, 0.3)
 }
