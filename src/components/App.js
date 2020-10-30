@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useLocation } from "react-router-dom";
 import { withTranslation } from "react-i18next";
 
 //STYLES
@@ -101,8 +101,8 @@ makeDataObject(21, images1013, "2010-2013");
 makeDataObject(34, images0010, "2000-2010");
 
 
-
 let clickeddiv = 1;
+
 class App extends Component {
   onObjectClick = (clickeddivffromdarbai) => {
     clickeddiv = clickeddivffromdarbai;
@@ -124,7 +124,6 @@ class App extends Component {
                   onLoad={onLoad}
                   t={t}
                   listOfObjectsLT={listOfObjectsLT}
-                  number={clickeddiv}
                 />
               )}
             />

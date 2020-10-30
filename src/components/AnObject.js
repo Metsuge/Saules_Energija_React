@@ -1,16 +1,18 @@
 import React from "react";
 import { withTranslation } from "react-i18next";
+import { useParams } from 'react-router-dom';
 
-function AnObject({ listOfObjectsLT, number, t, onLoad }) {
-  let s = listOfObjectsLT[number].src;
-  let listOfAdditionalPics = listOfObjectsLT[number].pics;
+function AnObject({ listOfObjectsLT, t, onLoad }) {
+  let { id } = useParams();
+  let s = listOfObjectsLT[id].src;
+  let listOfAdditionalPics = listOfObjectsLT[id].pics;
 
   return (
     <>
       <div onLoad={onLoad()}>
         <div className="pagrindinis-div">
           <p className="intro-about">
-            {t(`listOfObjectsLT.id${listOfObjectsLT[number].id}.title`)}
+            {t(`listOfObjectsLT.id${listOfObjectsLT[id].id}.title`)}
           </p>
           <div className="object-div">
             <div className="img-object-div">
