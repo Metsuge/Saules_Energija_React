@@ -1,0 +1,49 @@
+.buttonList {
+  display: inline-flex;
+  list-style-type: none;
+}
+
+.active_button {
+  background-color: rgb(228, 228, 228);
+}
+
+.button_apie_mus {
+  width: 150px;
+  height: 50px;
+  background-color: #243f54;
+  border-radius: 20px;
+  font-family: "Mulish", sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.button_apie_mus:active {
+  transform: scale(0.95);
+}
+
+.button_apie_mus_div {
+  width: 60%;
+  padding: 50px 10px 30px 10px;
+  margin: auto;
+}
+
+.custom-select{
+  margin: 20px;
+  width:auto;
+}
+
+.select{
+  
+  width: 120px;
+  height: 30px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.select-option{
+  border: 1px solid white;
+}

@@ -1,0 +1,12 @@
+.menu_logo {
+  z-index: 101;
+  position: sticky;
+  margin: 0px 15px 15px 30px;
+  margin-top: 20px;
+}
+
+.open {
+  display: flex !important;
+  -webkit-transition: width 0.5s;
+  transition: width 0.5s;
+}

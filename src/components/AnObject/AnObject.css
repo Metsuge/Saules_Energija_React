@@ -1,0 +1,192 @@
+.object-div {
+  flex-wrap: wrap;
+  width: 80%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  position: relative;
+  margin: 40px 20px 0 20px;
+}
+
+.object-img {
+  overflow: hidden;
+  width: 300px;
+  height: auto;
+  margin: 10px;
+  position: relative;
+}
+
+.object-text {
+  width: 60%;
+  height: auto;
+  margin: 20px;
+}
+
+.main-section-Projects {
+  position: relative;
+}
+
+.each-img {
+  overflow: hidden;
+  width: 250px;
+  height: 180px;
+  margin: 10px;
+  position: relative;
+  border: 1px black solid;
+}
+
+.darbai-img {
+  width: 100%;
+  height: 100%;
+}
+
+.text-section {
+  position: absolute;
+  bottom: 0px;
+}
+.textonimg {
+  font-weight: bolder;
+  color: black;
+  font-size: 3vh;
+}
+
+.img-section {
+  margin: auto;
+  flex-wrap: wrap;
+  width: 70%;
+  height: auto;
+  text-align: center;
+  display: flex;
+  position: relative;
+}
+
+.pagrindinis-div {
+  text-align: -moz-center;
+  margin: auto;
+  width: 90%;
+}
+
+.DarbaiLT-about-section {
+  width: 80%;
+  margin: auto;
+  padding: 30px 30px 5px 30px;
+  position: absolute;
+  bottom: 35px;
+  color: white;
+}
+
+.bolder {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 600;
+}
+
+.intro-about {
+  font-size: 3vw;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+}
+
+.intro-p {
+  font-size: 2.2vw;
+  padding: 10px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+.cover {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  position: relative;
+  display: grid;
+  height: 100%;
+}
+
+.coverimg {
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
+}
+
+.namas {
+  margin-left: 30px;
+  margin: auto;
+  width:80%;
+}
+
+.cover2 {
+  height: auto;
+  text-align: center;
+  display: flex;
+  position: relative;
+  margin: 50px 20px 25px 20px;
+}
+
+.partnercoverflex {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: relative;
+}
+
+.intro-div {
+  width: inherit;
+}
+
+.cover-photo {
+  width: 50%;
+  height: auto;
+}
+
+.cropped-pics {
+  display: flex;
+  flex-wrap: wrap;
+  width: 540px;
+}
+
+@media only screen and (max-width: 875px) {
+  .object-div {
+    flex-direction: column;
+  }
+
+  .DarbaiLT-about-section {
+    padding: 0px 30px 5px 30px;
+    width: unset;
+    color: black;
+  }
+
+  .partnercoverflex {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .cover2 {
+    flex-direction: column;
+  }
+
+  .intro-p {
+    font-size: 5vw;
+    width: 100%;
+  }
+  .intro-about {
+    font-size: 5vw;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .cropped-pics {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 597px) {
+  .main {
+    visibility: hidden;
+  }
+}
